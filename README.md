@@ -1,24 +1,58 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+| Column              | Type    | Options      |
+| ------------------- | ------  | -----------  |
+| nickname            | string  | null: false  |
+| email               | string  | unique: true |
+| encrypted_password  | string  | null: false  |
+| skill               | string  | null: false  |
 
-Things you may want to cover:
+### Association
+- has_many :posts
+- has_many :comments
+- has_many :likes
 
-* Ruby version
 
-* System dependencies
+## postsテーブル
+| Column               | Type        | Options            |
+| -------------------- | ----------- | ------------------ |
+| title                | string      | null: false        |
+| post_text            | text        | null: false        |
+| place_id             | integer     | null: false        |
+| fishing_result_id    | integer     | null: false        |
+| water_depth_id       | integer     | null: false        |
+| weather_id           | integer     | null: false        |
+| feed_id              | integer     | null: false        |
+| posts                | references  | foreign_key: true  |
+| user                 | references  | foreign_key: true  |
 
-* Configuration
+### Association
+- belongs_to :user
+- has_many :comments
+- has_many :likes
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## commentsテーブル
+| Column  | Type        | Options            |
+| ------- | ----------- | ------------------ |
+| text    | text        | null: false        |
+| item    | references  | foreign_key: true  |
+| user    | references  | foreign_key: true  |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- belongs_to :user
+- belongs_to :post
 
-* Deployment instructions
 
-* ...
+
+##  addressesテーブル
+| Column  | Type        | Options            |
+| ------- | ----------- | ------------------ |
+| item    | references  | foreign_key: true  |
+| user    | references  | foreign_key: true  |
+
+### Association
+- belongs_to :user
+- belongs_to :post
