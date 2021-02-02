@@ -1,0 +1,42 @@
+  <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+    <div class='form-wrap'>
+
+        <div class='form-header'>
+          <h2 class='form-header-text'>
+            ユーザー新規登録
+          </h2>
+          <div class="form-btn-wrap">
+          <a href="/" class="form__btn" >戻る</a>
+          </div>
+        </div>
+
+        <div class='login-flash-message'>
+            <%= flash[:notice] %>
+            <%= flash[:alert] %>
+        </div>
+ 
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="indispensable">必須</label>
+            <span class="form-text">メールアドレス</span>
+          </div>
+            <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+        </div>
+
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="indispensable">必須</label>
+            <span class="form-text">パスワード(6文字以上)</span>
+          </div>
+            <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
+        </div>
+
+
+        <div class="actions">
+          <%= f.submit "ログイン", class: :form__btn  %>
+        </div>
+    </div>
+  <% end %>
+
+
+
