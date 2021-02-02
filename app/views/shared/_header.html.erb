@@ -3,11 +3,14 @@
         <div class="nav">
           <div class="nav__left">
             <%= link_to image_tag("image2.png", class: :logo), root_path %>
+            ようこそゲスト様
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
+
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete , class: "nav__btn"%>
               <%= link_to "投稿する", "#", class: "nav__btn" %>
+              <%= link_to "マイページ", "#", class: "nav__btn" %>
             </div>
           <% else %>
             <div class="nav__right">
@@ -17,4 +20,30 @@
           <% end %>
         </div>
       </div>
+      <nav id="global_nav">
+        <div class="gnav_cnt">
+          <div class="gnav_menu">
+          <ul class="gnav_list">
+            <li class="item">
+              <a href="#" class="gnav_btn">
+               <span class="gnav_title">桧原湖map</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="gnav_btn">
+               <span class="gnav_title">アイテム紹介</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="gnav_btn">
+               <span class="gnav_title">桧原湖周辺情報</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="gnav_btn">
+               <span class="gnav_title">釣果情報</span>
+              </a>
+            </li>
+        </div>
+      </nav>
     </header>

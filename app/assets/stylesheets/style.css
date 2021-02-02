@@ -37,23 +37,23 @@ a {
 /* ヘッダー */
 
 .header {
+  width: 100%;
   background-color: #f1f8fe;
-  margin-bottom: 48px;
   padding: 20px 0;
 
 }
 .inner {
   width: 90%;
-  margin: 0 auto;
+
 }
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  text-align: center;
+
 }
 .logo {
-  width: 200px;
+  width: 100px;
 }
 .nav__btn{
   display: inline-block;
@@ -83,10 +83,89 @@ a {
   opacity: 0.5;
 }
 
+/* メニュー表 */
+#global_nav {
+  width: 100%;
+  position: absolute;
+  top: 71px;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 30%);
+}
+
+.gnav_cnt {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1240px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.gnav_menu {
+  flex: 1;
+  width: auto;
+}
+.gnav_list {
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  flex: 1;
+  display: block;
+  max-width: 179px;
+  font-size: 14px;
+  position: relative;
+}
+
+.item:before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 54px;
+  margin-top: -27px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.item:last-child:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 54px;
+  margin-top: -27px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+  color: #6b4d1e;
+  text-decoration: none;
+}
+
+.gnav_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 54px;
+  text-align: center;
+}
+
 /* フォーム周り */
 .registration-main {
  width: 100%;
- min-width: 500px;
+ min-width: 450px;
  height: 100%;
  display: flex;
  justify-content: center;
@@ -401,6 +480,7 @@ a {
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .inner {
+    
     margin: 0 auto;
   }
   .page-heading {
