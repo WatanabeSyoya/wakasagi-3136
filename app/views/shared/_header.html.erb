@@ -3,7 +3,12 @@
         <div class="nav">
           <div class="nav__left">
             <%= link_to image_tag("image2.png", class: :logo), root_path %>
-            ようこそゲスト様
+            <%# ログインしているときは以下を表示する %>
+              <%# <div class="greeting"> %>
+                <%= "こんにちは、タロウさん！" %>
+                <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
+              <%# </div> %>
+            <%# // ログインしているときは上記を表示する %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
@@ -36,6 +41,11 @@
             </li>
             <li class="item">
               <a href="#" class="gnav_btn">
+               <span class="gnav_title">よくある質問</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="https://www.urabandai-inf.com/" class="gnav_btn">
                <span class="gnav_title">桧原湖周辺情報</span>
               </a>
             </li>

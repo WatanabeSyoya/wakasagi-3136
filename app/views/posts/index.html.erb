@@ -1,19 +1,55 @@
 <%= render "shared/header" %>
 <main class="main">
+  <%# トップ画 %>
   <div class="top">
-    <%# ログインしているときは以下を表示する %>
-      <%# <div class="greeting"> %>
-        <%# こんにちは、 %>
-        <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
-      <%# </div> %>
-    <%# // ログインしているときは上記を表示する %>
     <div class="card__wrapper">
-    <div class="main_image">
-      <%= image_tag "image3.png" %>
-    </div>
-    
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+      <div class="main_image">
+        <%= image_tag "image4.jpg"  %>
+      </div>
     </div>
   </div>
+  <%# /トップ画 %>
+
+  <%# 投稿一覧 %>
+  <div class="post_wrap">
+    <h2 class="title">
+      釣果情報一覧
+    </h2>
+    <ul class='post-lists'>
+    </ul>
+  </div>
+  <%# /投稿一覧部分 %>
+
+  <%# 桧原湖周辺情報 %>
+  <div class="item_wrap">
+    <h2 class="title">
+      アイテム紹介
+    </h2>
+    <ul class='item-lists'>
+    </ul>
+  </div>
+  <%# /投稿一覧部分 %>
+
+  <%# 投稿一覧 %>
+  <div class="faq_wrap">
+    <h2 class="title">
+      よくある質問
+    </h2>
+    <ul class='faq-lists'>
+    </ul>
+  </div>
+  <%# /投稿一覧部分 %>
+
+  <%# 投稿一覧 %>
+  <div class="map_wrap">
+    <h2 class="title">
+      桧原湖マップ
+    </h2>
+    <div class="map">
+    </div>
+  </div>
+  <%# /投稿一覧部分 %>
+
+
 </main>
 <%= render "shared/footer" %>
