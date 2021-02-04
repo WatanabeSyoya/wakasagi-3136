@@ -5,9 +5,7 @@
           <h2 class='form-header-text'>
             ユーザー新規登録
           </h2>
-          <div class="form-btn-wrap">
-          <a href="/" class="form__btn" >戻る</a>
-          </div>
+
         </div>
 
         <div class='login-flash-message'>
@@ -34,6 +32,9 @@
 
         <div class="actions">
           <%= f.submit "ログイン", class: :form__btn  %>
+        </div>
+        <div class="actions">
+          <%=link_to 'もどる', root_path, class:"back-btn" %>
         </div>
     </div>
   <% end %>

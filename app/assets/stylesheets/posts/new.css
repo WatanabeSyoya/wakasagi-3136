@@ -167,11 +167,14 @@
 }
 
 .back-btn {
+  width: 20%;
+  height: 50px;
+  padding: 0.4em 1.6em;
+  font-size: 15px;
+  border-radius: 3px;
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
-  padding: 15px 35%;
-  text-decoration: none;
 }
 
 /* /下部ボタン */
