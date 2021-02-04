@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 2021_02_04_020002) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "post_text", null: false
+    t.integer "fishing_result", null: false
     t.integer "place_id", null: false
-    t.integer "fishing_result_id", null: false
     t.integer "water_depth_id", null: false
     t.integer "weather_id", null: false
     t.integer "feed_id", null: false

@@ -19,8 +19,8 @@
 | -------------------- | ----------- | ------------------ |
 | title                | string      | null: false        |
 | post_text            | text        | null: false        |
+| fishing_result       | integer     | null: false        |
 | place_id             | integer     | null: false        |
-| fishing_result_id    | integer     | null: false        |
 | water_depth_id       | integer     | null: false        |
 | weather_id           | integer     | null: false        |
 | feed_id              | integer     | null: false        |
