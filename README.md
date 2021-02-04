@@ -19,12 +19,11 @@
 | -------------------- | ----------- | ------------------ |
 | title                | string      | null: false        |
 | post_text            | text        | null: false        |
+| fishing_result       | integer     | null: false        |
 | place_id             | integer     | null: false        |
-| fishing_result_id    | integer     | null: false        |
 | water_depth_id       | integer     | null: false        |
 | weather_id           | integer     | null: false        |
 | feed_id              | integer     | null: false        |
-| posts                | references  | foreign_key: true  |
 | user                 | references  | foreign_key: true  |
 
 ### Association
@@ -38,7 +37,7 @@
 | Column  | Type        | Options            |
 | ------- | ----------- | ------------------ |
 | text    | text        | null: false        |
-| item    | references  | foreign_key: true  |
+| post    | references  | foreign_key: true  |
 | user    | references  | foreign_key: true  |
 
 ### Association
@@ -50,7 +49,7 @@
 ##  addressesテーブル
 | Column  | Type        | Options            |
 | ------- | ----------- | ------------------ |
-| item    | references  | foreign_key: true  |
+| post    | references  | foreign_key: true  |
 | user    | references  | foreign_key: true  |
 
 ### Association
