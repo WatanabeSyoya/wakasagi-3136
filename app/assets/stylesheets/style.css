@@ -297,79 +297,7 @@ a {
   color: red;
 }
 
-/* メイン */
-.top{
 
-  margin-bottom: 105px;
-}
-
-
-.title {
-  font-family: "Noto Serif Japanese", serif, san-serif;
-  font-weight: 700;
-  font-size: 2.333rem;
-  color: #6b4d1e;
-  text-align: center;
-  margin-bottom: 5vh;
-  position: relative;
-}
-
-.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-/* 釣果情報 */
-.post_wrap {
-  width: 100%;
-  height: 200px;
-  background-color: coral;
-}
-/* 釣果情報 */
-
-
-/* アイテム紹介 */
-.item_wrap{
-  width: 100%;
-  height: 200px;
-  background-color:greenyellow;
-}
-/* アイテム紹介 */
-
-
-/* よくある質問 */
-.faq_wrap{
-  width: 100%;
-  height: 200px;
-  background-color:darkcyan;
-}
-/* よくある質問 */
-
-/* 桧原湖マップ */
-.map_wrap{
-  width: 100%;
-  height: 200px;
-  background-color:cornflowerblue;
-}
-/* 桧原湖マップ */
-
-
-
-/* フッター */
-.footer {
-  background-color: #999;
-  padding: 10px 0;
-}
-.copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 10px;
-}
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
