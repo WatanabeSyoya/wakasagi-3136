@@ -3,7 +3,7 @@
         <div class="nav">          
           <% if user_signed_in? %>
             <div class="nav__left">
-              <%= "こんにちは#{current_user.nickname}さん！" %> 
+              <%= "こんにちは"%><br><%= "#{current_user.nickname}さん！" %> 
             </div>
           <% else %>
             <div class="nav__left">
