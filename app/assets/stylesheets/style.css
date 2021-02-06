@@ -293,24 +293,3 @@ a {
   text-align: center;
   color: red;
 }
-
-
-
-/* タブレット対応 */
-@media (max-width: 1024px) {
-
-
- /* スマホ表示 */
-@media (max-width: 599px) {
-  .logo {
-    width: 140px;
-  }
-
-
-@media (max-width: 400px) {
-  .logo {
-    width: 40px;
-  }
-
-
-}
