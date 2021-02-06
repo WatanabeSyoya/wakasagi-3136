@@ -1,7 +1,4 @@
 class PostsController < ApplicationController
-
-
-
   def index
     @posts = Post.includes(:user).order('created_at DESC')
   end
@@ -22,14 +19,13 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     num = @post.user_id
-    @max_resuld = Post.where(user_id:num).maximum(:fishing_result) 
-    
+    @max_resuld = Post.where(user_id: num).maximum(:fishing_result)
   end
 
   private
+
   def post_params
-    params.require(:post).permit(:title, :post_text, :fishing_result, :place_id, :water_depth_id, :weather_id, :feed_id, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :post_text, :fishing_result, :place_id, :water_depth_id, :weather_id, :feed_id,
+                                 :image).merge(user_id: current_user.id)
   end
-
-
 end

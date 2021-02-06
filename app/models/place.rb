@@ -20,7 +20,7 @@ class Place < ActiveHash::Base
     { id: 18, name: '雄子沢' },
     { id: 19, name: '京ヶ森' },
     { id: 20, name: '温泉下' },
-    { id: 21, name: 'その他' },
+    { id: 21, name: 'その他' }
   ]
 
   include ActiveHash::Associations
