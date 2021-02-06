@@ -142,6 +142,8 @@ a {
 }
 
 .gnav_title {
+  font-size: 12px;
+  font-weight: 700;
   font-family: "Noto Serif Japanese", serif, san-serif;
   color: #6b4d1e;
   display: flex;
