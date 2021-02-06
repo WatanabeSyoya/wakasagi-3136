@@ -1,9 +1,7 @@
 /* メイン */
 .top{
-
-  margin-bottom: 105px;
+  margin-bottom: 50px;
 }
-
 
 .title {
   font-family: "Noto Serif Japanese", serif, san-serif;
@@ -17,11 +15,11 @@
 
 .title::after {
   content: '';
-  width: 70px;
+  width: 180px;
   height: 4px;
   background-color: #3ccace;
   position: absolute;
-  bottom: -10px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -36,33 +34,57 @@
 
 .post-lists {
   width: 100vw;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .list {
-  width: 33vh;
+  width: 15vh;
   padding: 1vw;
+  margin: 1px;
+  border-radius: 3px;
   background-color: #FFF;
+  
 }
 
 .post-img-content {
-  position: relative;
 }
 
-.item-img {
-  width: 33vh;
-  height: 33vh;
-}
+.post-img{
 
+  height: 10vh;
+  text-align: center;
+}
 .temporary-img {
-  width: 33vh;
-  height: 33vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 10vh;
   background-color: #fff8dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-info {
+  background-color: #FFF;
+  color: black;
+
+}
+
+.post-title{
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+.result{
+  font-size: 10px;
+  text-align: center;
+}
+.star-btn{
+  font-size: 10px;
+}
+.star-icon{
+  width: 12px;
 }
 /* 釣果情報 */
 

@@ -1,18 +1,18 @@
     <header class="header">
       <div class="inner">
-        <div class="nav">
-          <div class="nav__left">
-            <%= link_to image_tag("image2.png", class: :logo), root_path %>
-            <%# ログインしているときは以下を表示する %>
-              <%# <div class="greeting"> %>
-                <%= "こんにちは、タロウさん！" %>
-                <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
-              <%# </div> %>
-            <%# // ログインしているときは上記を表示する %>
-          </div>
+        <div class="nav">          
+          <% if user_signed_in? %>
+            <div class="nav__left">
+              <%= "こんにちは#{current_user.nickname}さん！" %> 
+            </div>
+          <% else %>
+            <div class="nav__left">
+              <div class = "greeting">ワカサギ釣果情報サイト<br>＜桧原湖版＞</div>
+            </div>
+          <% end %>
+
           <% if user_signed_in? %>
             <div class="nav__right">
-
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete , class: "nav__btn"%>
               <%= link_to "投稿する", new_post_path, class: "nav__btn" %>
               <%= link_to "マイページ", "#", class: "nav__btn" %>
@@ -23,6 +23,7 @@
               <%= link_to "新規登録", new_user_registration_path, class: "nav__btn" %>
             </div>
           <% end %>
+
         </div>
       </div>
       <nav id="global_nav">

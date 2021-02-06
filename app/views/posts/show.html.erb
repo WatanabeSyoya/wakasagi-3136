@@ -1,0 +1,60 @@
+
+
+<div class="post-show">
+  <div class="post-box">
+    <div class="box-header-left">
+      <div class = "box-header">
+        <h2 class="name">
+          <%= link_to "#{@post.user.nickname}さん", root_path %>
+        </h2>
+        <div class = "box-create-date">
+          <%= @post.created_at.strftime('%Y/%m/%d') %>
+        </div>
+      </div>
+    </div>
+    <div class="box-header-left">
+      <%= link_to "戻る", root_path  %>
+    </div>
+    <div class="item-img-content">
+      <%= image_tag @post.image  if @post.image.attached?%>
+        <% unless @post.image.present? %>
+          <div class='temporary-img'>
+            <p class="temporary-img-text">No image</p>
+          </div>
+        <% end %>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-post">投稿タイトル</th>
+          <td class="detail-value"><%= @post.title %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">釣果</th>
+          <td class="detail-value"><%= "#{@post.fishing_result}匹" %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">場所</th>
+          <td class="detail-value"><%= @post.place.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">棚</th>
+          <td class="detail-value"><%= "水面から#{@post.water_depth.name}付近" %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">天気</th>
+          <td class="detail-value"><%= @post.weather.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">エサ</th>
+          <td class="detail-value"><%= @post.feed.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">コメント</th>
+          <td class="detail-value"><%= @post.post_text %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>  
+

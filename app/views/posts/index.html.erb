@@ -4,7 +4,7 @@
   <div class="top">
     <div class="card__wrapper">
       <div class="main_image">
-        <%= image_tag "image6.jpg"  %>
+        <%= image_tag "image6.jpg" %>
       </div>
     </div>
   </div>
@@ -18,27 +18,29 @@
     <ul class='post-lists'>
       <% @posts.each do |post|%>
       <li class='list'>
-        <%= link_to "#" do %>
+        <%= link_to post_path(post.id) do %>
           <div class='post-img-content'>
-            <%= image_tag post.image, class: "item-img" if post.image.attached?%>
+            <%= image_tag post.image, class: "post-img" if post.image.attached?%>
             <% unless post.image.present? %>
             <div class='temporary-img'>
-              <span>No image</span>
+              <p class="temporary-img-text">No image</p>
             </div>
             <% end %>
           </div>
-          
+
           <div class='post-info'>
-            <h3 class='post-title'>
+            <div class='post-title'>
               <%= post.title %>
-            </h3>
+            </div>
             <div class='result'>
-              <span><%= "釣果：#{post.fishing_result}匹" %><br><%= "#{post.user.nickname}さん" %></span>
+              <%= "釣果：#{post.fishing_result}匹" %><br><%= post.created_at.strftime('%Y/%m/%d') %>
+            </div>
               <div class='star-btn'>
+                <%= "#{post.user.nickname}さん" %>
                 <%= image_tag "star.png", class:"star-icon" %>
                 <span class='star-count'>0</span>
               </div>
-            </div>
+            
           </div>
         <% end %>
       </li>

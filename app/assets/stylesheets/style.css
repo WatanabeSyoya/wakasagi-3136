@@ -50,14 +50,11 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
 
-}
-.logo {
-  width: 100px;
-}
 .nav__btn{
   display: inline-block;
-  padding: 0.4em 1.6em;
+  padding: 0.3em 0.5em;
   font-size: 0.8em;
   color: #87CEFA;
   text-decoration: none;
@@ -126,7 +123,7 @@ a {
   width: 2px;
   height: 54px;
   margin-top: -27px;
-  background-color: #ddd;
+  background-color: #d2b48c;
   position: absolute;
   top: 50%;
   left: 0;
@@ -138,7 +135,7 @@ a {
   width: 2px;
   height: 54px;
   margin-top: -27px;
-  background-color: #ddd;
+  background-color: #d2b48c;
   position: absolute;
   top: 50%;
   right: 0;
@@ -301,44 +298,19 @@ a {
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
-  .inner {
-    
-    margin: 0 auto;
-  }
-  .page-heading {
-    font-size: 24px;
-  }
-  .card {
-    width: 48%;
-    margin-bottom: 40px;
-  }
-  .prototype_image{
-    width: 60%;
-  }
-}
+
 
  /* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
     width: 140px;
   }
-  .page-heading {
-    font-size: 20px;
+
+
+@media (max-width: 400px) {
+  .logo {
+    width: 40px;
   }
-  .card {
-    width: 100%;
-    margin-bottom: 60px;
-  }
-  .card__title {
-    font-size: 18px;
-  }
-  .card__summary {
-    font-size: 14px;
-  }
-  .prototype_image{
-    width: 100%;
-  }
-  .table{
-    width: 100%;
-  }
+
+
 }
