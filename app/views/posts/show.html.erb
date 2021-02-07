@@ -13,7 +13,9 @@
       </div>
     </div>
     <div class="box-header-left">
-      <%= link_to "戻る", root_path  %>
+      <%= link_to "戻る", root_path %>
+      <%= link_to "削除", post_path(@post.id), method: :delete %>
+      <%= link_to "編集", root_path %>
     </div>
     <div class="item-img-content">
       <%= image_tag @post.image  if @post.image.attached?%>

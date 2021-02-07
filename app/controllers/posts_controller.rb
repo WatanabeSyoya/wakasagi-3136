@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @posts = Post.includes(:user).order('created_at DESC')
   end
@@ -22,8 +24,17 @@ class PostsController < ApplicationController
     @max_resuld = Post.where(user_id: num).maximum(:fishing_result)
   end
 
-  private
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.user_id == current_user.id
+      @post.destroy
+      redirect_to root_path
+    else
+      redirect_to action: :index
+    end
+  end
 
+  private
   def post_params
     params.require(:post).permit(:title, :post_text, :fishing_result, :place_id, :water_depth_id, :weather_id, :feed_id,
                                  :image).merge(user_id: current_user.id)
