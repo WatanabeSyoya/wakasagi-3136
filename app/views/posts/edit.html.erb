@@ -1,0 +1,72 @@
+<div class="post-contents">  
+  <div class="post-main">
+    <h2 class="post-main-title">釣果情報を入力</h2>
+    <%= form_with model:@post,local: true do |f| %>
+
+      <%#= render 'shared/error_messages', model: f.object %>
+
+      <%# 出品画像 %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          出品画像
+        </div>
+        <div class="click-upload">
+          <p>
+            画像をアップロード
+          </p>
+          <%= f.file_field :image, id:"post-image" %>
+        </div>
+      </div>
+      <%# /出品画像 %>
+      <%# 商品名と商品説明 %>
+      <div class="new-posts">
+        <div class="weight-bold-text">
+          投稿タイトル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"例）爆釣の一日！", maxlength:"40" %>
+        <div class="items-explain">
+          <div class="weight-bold-text">
+            説明文
+          </div>
+          <%= f.text_area :post_text, class:"items-text", id:"item-info", placeholder:"例）浅場の強さで朝方は爆釣！日中も食いが止まらなかった！" ,rows:"7" ,maxlength:"1000" %>
+        </div>
+        <div class="weight-bold-text">
+          釣果
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :fishing_result, class:"items-text", id:"item-name", placeholder:"半角数字のみを入力" %>
+      </div>
+
+      <div class="post-detail">
+        <div class="form">
+          <div class="weight-bold-text">
+            釣り場
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+          <div class="weight-bold-text">
+            棚（水面から○○m）
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:water_depth_id, WaterDepth.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+          <div class="weight-bold-text">
+            天気
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+          <div class="weight-bold-text">
+            エサ
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:feed_id, Feed.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+        </div>
+      </div>
+
+      <div class="post-btn-contents">
+        <%= f.submit "変更する" ,class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

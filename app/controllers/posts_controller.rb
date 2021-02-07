@@ -24,6 +24,25 @@ class PostsController < ApplicationController
     @max_resuld = Post.where(user_id: num).maximum(:fishing_result)
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    redirect_to root_path if @post.user_id != current_user.id
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to post_path(@post)
+    else
+      render :edit
+    end
+  end
+
+
+
+
+
+
   def destroy
     @post = Post.find(params[:id])
     if @post.user_id == current_user.id
