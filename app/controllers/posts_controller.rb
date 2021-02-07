@@ -22,6 +22,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     num = @post.user_id
     @max_resuld = Post.where(user_id: num).maximum(:fishing_result)
+    @message = Message.new
+    @messages = @post.messages.includes(:user)
   end
 
   def edit

@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_one_attached :image
+  has_many :messages
 
   with_options extend ActiveHash::Associations::ActiveRecordExtensions do
     belongs_to :place

@@ -10,7 +10,7 @@
 
 ### Association
 - has_many :posts
-- has_many :comments
+- has_many :messages
 - has_many :likes
 
 
@@ -28,12 +28,12 @@
 
 ### Association
 - belongs_to :user
-- has_many :comments
+- has_many :messages
 - has_many :likes
 
 
 
-## commentsテーブル
+## messagesテーブル
 | Column  | Type        | Options            |
 | ------- | ----------- | ------------------ |
 | text    | text        | null: false        |
@@ -46,7 +46,7 @@
 
 
 
-##  addressesテーブル
+##  likesテーブル
 | Column  | Type        | Options            |
 | ------- | ----------- | ------------------ |
 | post    | references  | foreign_key: true  |
