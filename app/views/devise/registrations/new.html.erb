@@ -53,12 +53,9 @@
             <label class = "redio_btn"><%= f.radio_button :skill, "名人" %>名人</label>
         </div>
 
-
-        <div class="actions">
-          <%= f.submit "新規登録", class: :form__btn  %>
-        </div>
-        <div class="actions">
-          <%=link_to 'もどる', root_path, class:"back-btn" %>
+        <div class="post-btn-contents">
+        <%= f.submit "投稿する" ,class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
         </div>
     </div>
   <% end %>

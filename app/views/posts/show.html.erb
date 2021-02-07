@@ -5,7 +5,7 @@
     <div class="box-header-left">
       <div class = "box-header">
         <h2 class="name">
-          <%= link_to "#{@post.user.nickname}さん", root_path %>
+          <%= link_to "#{@post.user.nickname}さん",  user_path(@post.user.id)%>
         </h2>
         <div class = "box-create-date">
           <%= @post.created_at.strftime('%Y/%m/%d') %>
