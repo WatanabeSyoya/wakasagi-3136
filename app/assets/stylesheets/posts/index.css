@@ -91,7 +91,7 @@
 /* アイテム紹介 */
 .item_wrap{
   width: 100%;
-  height: 200px;
+  height: 400px;
   background-color:greenyellow;
 }
 /* アイテム紹介 */
@@ -100,7 +100,7 @@
 /* よくある質問 */
 .faq_wrap{
   width: 100%;
-  height: 200px;
+  height: 800px;
   background-color:darkcyan;
 }
 /* よくある質問 */
@@ -108,7 +108,7 @@
 /* 桧原湖マップ */
 .map_wrap{
   width: 100%;
-  height: 200px;
+  height: 1200px;
   background-color:cornflowerblue;
 }
 /* 桧原湖マップ */
