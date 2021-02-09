@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :liking_users, through: :likes, source: :user
-  
+
   with_options extend ActiveHash::Associations::ActiveRecordExtensions do
     belongs_to :place
     belongs_to :water_depth

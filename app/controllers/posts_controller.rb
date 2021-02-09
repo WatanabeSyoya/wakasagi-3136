@@ -38,11 +38,6 @@ class PostsController < ApplicationController
     end
   end
 
-
-
-
-
-
   def destroy
     @post = Post.find(params[:id])
     if @post.user_id == current_user.id
@@ -54,6 +49,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :post_text, :fishing_result, :place_id, :water_depth_id, :weather_id, :feed_id,
                                  :image).merge(user_id: current_user.id)
