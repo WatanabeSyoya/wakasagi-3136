@@ -34,7 +34,7 @@
               </div>
               <% end %>
             </div>
-
+          <% end %>
             <div class='post-info'>
               <div class='post-title'>
                 <%= post.title %>
@@ -44,11 +44,9 @@
               </div>
                 <div class='star-btn'>
                   <%= "#{post.user.nickname}さん" %>
-                  <%= image_tag "star.png", class:"star-icon" %>
-                  <span class='star-count'>0</span>
+                  <%= render partial: 'post', locals: {post: post} %>           
                 </div>             
-            </div>
-          <% end %>
+            </div>          
         </li>
         <% end %>
 
