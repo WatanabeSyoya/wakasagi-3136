@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: "posts#index"
   resources :posts do
     resources :messages, only: :create
-    resources :likes, only: [:create, :destroy]
   end
   resources :users, only: :show
+  post   '/like/:post_id' => 'likes#like',   as: 'like'
+  delete '/like/:post_id' => 'likes#unlike', as: 'unlike'
 end
