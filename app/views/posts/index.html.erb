@@ -44,7 +44,7 @@
               </div>
                 <div class='star-btn'>
                   <%= "#{post.user.nickname}さん" %>
-                  <%= render partial: 'post', locals: {post: post} %>           
+                  <%= render partial: 'likes/like', locals: {post: post} %>           
                 </div>             
             </div>          
         </li>

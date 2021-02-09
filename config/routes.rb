@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
   resources :users, only: :show
-  post   '/like/:post_id' => 'likes#like',   as: 'like'
-  delete '/like/:post_id' => 'likes#unlike', as: 'unlike'
+  post   '/like/:post_id' ,to: 'likes#like',   as: 'like'
+  delete '/like/:post_id' ,to: 'likes#unlike', as: 'unlike'
 end
