@@ -1,23 +1,29 @@
 <div class="main">
-  <%= link_to "<", post_path(@post.id), class: "home-btn" %>
-  <div class="inner">
-    <div class="user__wrapper">
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの情報"%>
-      </h2>
-      <div class="user_details">
-      <%= "一番釣れた日は#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}
-                      (#{@max_fishing_result_details.weather.name})"%><br>
-      <%= "釣果は#{@max_fishing_result}匹"%><br>
-      <%= "その時のエサは#{@max_fishing_result_details.feed.name}で、"%>
-      <%= "釣り場は#{@max_fishing_result_details.place.name}で、棚は水面から#{@max_fishing_result_details.water_depth.name}付近でした。"%>
-      </div>
-
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの釣果情報"%>
-      </h2>
-      <div class="user__card">
-
+  <div class="user_page">
+    <%= link_to "<", post_path(@post.id), class: "home-btn" %>   
+    <div class="user_inner">
+      <div class="user__wrapper">
+        <%= link_to "投稿詳細ページに戻る", post_path(@post.id) %>
+        <h2 class="page-heading">
+          <%= "#{@user.nickname}さんの情報"%>
+        </h2>
+        <div class="user_details">
+          <%= "一番釣れた日は#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}
+                          (#{@max_fishing_result_details.weather.name})"%><br>
+          <%= "釣果は#{@max_fishing_result}匹"%><br>
+          <%= "その時のエサは#{@max_fishing_result_details.feed.name}で、"%>
+          <%= "釣り場は#{@max_fishing_result_details.place.name}で、棚は水面から#{@max_fishing_result_details.water_depth.name}付近でした。"%>
+        </div>
+        <div class="search">
+          <div class="search_box">
+          </div>
+        </div>
+        <h2 class="page-heading">
+          <%= "#{@user.nickname}さんの釣果情報"%>
+        </h2>
+        <div class="user__card">
+          <%= render partial: "posts/post" ,collection: @posts %>
+        </div>
       </div>
     </div>
   </div>
