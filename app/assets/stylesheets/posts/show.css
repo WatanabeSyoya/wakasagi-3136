@@ -1,0 +1,14 @@
+.post-box{
+  width: 50%;
+  margin: 20px auto;
+}
+.box-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.name{
+  border-bottom: solid 2px #5989cf;
+}

@@ -18,6 +18,7 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+  width: 100%;
 }
 
 li {
@@ -38,8 +39,9 @@ a {
 
 .header {
   width: 100%;
+  height: 60px;
   background-color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
 
 }
 .inner {
@@ -53,14 +55,11 @@ a {
   align-items: center;
 }
 
-.nav__left{
-font-size: 0.8em;
-}
-
 .nav__btn{
   display: inline-block;
+  margin-right: 10px;
   padding: 0.2em 0.3em;
-  font-size: 0.8em;
+  font-size: 20px;
   color: #87CEFA;
   text-decoration: none;
   user-select: none;
@@ -85,14 +84,21 @@ font-size: 0.8em;
   opacity: 0.5;
 }
 
+.greeting {
+  font-family: 'M+ Type-1 (general-j) Regular';
+  font-size: 25px;
+  font-weight: 500;
+
+}
 /* メニュー表 */
 #global_nav {
   width: 100%;
+  height: 100px;
   position: absolute;
-  top: 66px;
-  left: 0;
+  top: 60px;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow:0 2px 3px 0;
 }
 
 .gnav_cnt {
@@ -123,26 +129,24 @@ font-size: 0.8em;
   content: '';
   width: 2px;
   height: 70px;
-  margin-top: -27px;
+  margin-top: -8px;
   background-color: #d2b48c;
   position: absolute;
-  top: 50%;
-  left: 0;
 }
 
 .item:last-child:after {
   content: '';
   width: 2px;
   height: 70px;
-  margin-top: -27px;
+  margin-top: -8px;
   background-color: #d2b48c;
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0;
 }
 
 .gnav_title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   font-family: "Noto Serif Japanese", serif, san-serif;
   color: #6b4d1e;

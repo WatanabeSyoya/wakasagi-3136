@@ -3,11 +3,13 @@
         <div class="nav">          
           <% if user_signed_in? %>
             <div class="nav__left">
-              <%= "こんにちは"%><br><%= "#{current_user.nickname}さん！" %> 
+              <div class = "greeting">
+              <%= "こんにちは#{current_user.nickname}さん！" %> 
+              </div>
             </div>
           <% else %>
             <div class="nav__left">
-              <div class = "greeting">ワカサギ釣果情報サイト<br>＜桧原湖版＞</div>
+              <div class = "greeting">ワカサギ釣果情報サイト＜桧原湖版＞</div>
             </div>
           <% end %>
 

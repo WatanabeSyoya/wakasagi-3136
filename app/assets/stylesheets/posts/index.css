@@ -112,7 +112,9 @@
 .faq_wrap{
   width: 100%;
   height: 800px;
-  background-color:#ffcccc;
+  background: -moz-linear-gradient(#ffb03c, #ff708d);
+  background: -webkit-linear-gradient(#ffb03c, #ff708d);
+  background: linear-gradient(to right, #ffb03c, #ff708d);
 }
 /* よくある質問 */
 
