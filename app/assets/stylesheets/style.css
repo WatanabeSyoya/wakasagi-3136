@@ -106,8 +106,7 @@ font-size: 0.8em;
 }
 
 .gnav_menu {
-  flex: 1;
-  width: auto;
+  width: 100%;
 }
 .gnav_list {
   display: flex;
@@ -115,16 +114,13 @@ font-size: 0.8em;
 }
 
 .item {
-  flex: 1;
-  display: block;
-  max-width: 179px;
-  font-size: 20px;
+  width: 20%;
+
   position: relative;
 }
 
 .item:before {
   content: '';
-  display: block;
   width: 2px;
   height: 70px;
   margin-top: -27px;
@@ -136,7 +132,6 @@ font-size: 0.8em;
 
 .item:last-child:after {
   content: '';
-  display: block;
   width: 2px;
   height: 70px;
   margin-top: -27px;
@@ -147,7 +142,7 @@ font-size: 0.8em;
 }
 
 .gnav_title {
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 700;
   font-family: "Noto Serif Japanese", serif, san-serif;
   color: #6b4d1e;
@@ -291,4 +286,10 @@ font-size: 0.8em;
 .login-flash-message {
   text-align: center;
   color: red;
+}
+
+@media (max-width: 769px) {
+  .header {
+    display: none;
+  }
 }

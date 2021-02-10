@@ -1,12 +1,11 @@
 $(function(){
   $('.bxslider').bxSlider({
-    speed: 4000,
-    mode: 'fade',
+    speed: 1000,
     auto: true,
     autoControls: true,
     stopAutoOnClick: true,
-    pager: true,
-    pause: 8000,
-    slideWidth: 2000
+    pager: false,
+    pause: 6000
+
   });
 });
