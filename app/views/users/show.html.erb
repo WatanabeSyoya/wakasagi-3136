@@ -14,17 +14,7 @@
           <%= "その時のエサは#{@max_fishing_result_details.feed.name}で、"%>
           <%= "釣り場は#{@max_fishing_result_details.place.name}で、棚は水面から#{@max_fishing_result_details.water_depth.name}付近でした。"%>
         </div>
-        <div class="search">
-          <div class="search_box">
-            <select class="sort_order" name="sort_order">
-              <option value="location.pathname" name="location.pathname">並び替え</option>
-              <option value="fishing_result_desc" name="location.pathname">釣れた順</option>
-              <option value="likes_count_desc" >いいね数順</option>
-              <option value="created_at_desc" >新着順</option>
-              <option value="created_at_asc" >投稿が古い順</option>
-            </select>
-          </div>
-        </div>
+
         <h2 class="page-heading">
           <%= "#{@user.nickname}さんの釣果情報"%>
         </h2>
