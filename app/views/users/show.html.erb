@@ -1,9 +1,9 @@
 <div class="main">
   <div class="user_page">
-    <%= link_to "<", post_path(@post.id), class: "home-btn" %>   
+    <%= link_to "<", root_path, class: "home-btn" %>   
     <div class="user_inner">
       <div class="user__wrapper">
-        <%= link_to "投稿詳細ページに戻る", post_path(@post.id) %>
+        <%= link_to "トップページに戻る", root_path %>
         <h2 class="page-heading">
           <%= "#{@user.nickname}さんの情報"%>
         </h2>
@@ -16,6 +16,13 @@
         </div>
         <div class="search">
           <div class="search_box">
+            <select class="sort_order" name="sort_order">
+              <option value="location.pathname" name="location.pathname">並び替え</option>
+              <option value="fishing_result_desc" name="location.pathname">釣れた順</option>
+              <option value="likes_count_desc" >いいね数順</option>
+              <option value="created_at_desc" >新着順</option>
+              <option value="created_at_asc" >投稿が古い順</option>
+            </select>
           </div>
         </div>
         <h2 class="page-heading">
