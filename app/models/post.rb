@@ -34,7 +34,7 @@ class Post < ApplicationRecord
       all.order(likes_count: :DESC)
     when 'created_at_desc'
       all.order(created_at: :DESC)
-    when 'created_at_desc'
+    when 'created_at_asc'
       all.order(created_at: :ASC)
     else
       all.order(created_at: :DESC)
