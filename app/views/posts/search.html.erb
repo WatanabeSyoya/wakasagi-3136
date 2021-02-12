@@ -1,0 +1,65 @@
+<div class="search-contents">
+  <%= link_to "トップページに戻る", root_path, class: "nav__btn" %>
+  <%# 投稿一覧 %>
+  <div class="post_wrap">
+    <h2 class="title">
+      釣果情報一覧
+    </h2>
+    <div class="search">
+      <div class="search_box">
+        <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.select :keyword, [["釣れた順", "fishing_result_desc"], 
+                                    ["いいね数順", "likes_count_desc"], 
+                                    ["新着順", "created_at_desc"], 
+                                    ["投稿が古い順", "created_at_asc"]], include_blank: "---選択してください---" %>
+          <%= form.submit "並び替える", class: "search-btn" %>
+        <% end %> 
+      </div>
+    </div>
+    <ul class='post-lists'>
+      <% @posts.each do |post|%>
+      <li class='list'>
+        <%= link_to post_path(post.id) do %>
+          <div class='post-img-content'>
+            <%= image_tag post.image, class: "post-img" if post.image.attached?%>
+            <% unless post.image.present? %>
+            <div class='temporary-img'>
+              <p class="temporary-img-text">No image</p>
+            </div>
+            <% end %>
+          </div>
+        <% end %>
+          <div class='post-info'>
+            <div class='post-title'>
+              <%= post.title %>
+            </div>
+            <div class='result'>
+              <%= "釣果：#{post.fishing_result}匹" %><br><%= post.created_at.strftime('%Y/%m/%d') %>
+            </div>
+              <div class='star-btn'>
+                <%= "#{post.user.nickname}さん" %>
+                <%= render partial: 'likes/like', locals: {post: post} %>           
+              </div>             
+          </div>          
+      </li>
+      <% end %>
+
+      <% if @posts.length == 0  %>
+        <li class='list'>
+          <%= link_to '/' do %>
+            <%= image_tag "image7.png", class: "item-img" %>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                投稿してね！
+              </h3>
+              <div class='star-btn'>
+                <%= image_tag "star.png", class:"star-icon" %>
+                <span class='star-count'>0</span>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

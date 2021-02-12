@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
     @posts = Post.includes(:user).order('created_at DESC')
@@ -47,6 +47,13 @@ class PostsController < ApplicationController
       redirect_to action: :index
     end
   end
+
+  def search
+    @posts = Post.sort(params[:keyword])
+ end
+
+
+
 
   private
 

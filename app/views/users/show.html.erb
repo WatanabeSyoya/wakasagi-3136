@@ -3,17 +3,18 @@
     <%= link_to "<", root_path, class: "home-btn" %>   
     <div class="user_inner">
       <div class="user__wrapper">
-        <%= link_to "トップページに戻る", root_path %>
+        <%= link_to "トップページに戻る", root_path, class: "nav__btn" %>
         <h2 class="page-heading">
           <%= "#{@user.nickname}さんの情報"%>
         </h2>
         <div class="user_details">
+        <% if @user.posts.present? %>
           <%= "一番釣れた日は#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}
                           (#{@max_fishing_result_details.weather.name})"%><br>
           <%= "釣果は#{@max_fishing_result}匹"%><br>
           <%= "その時のエサは#{@max_fishing_result_details.feed.name}で、"%>
           <%= "釣り場は#{@max_fishing_result_details.place.name}で、棚は水面から#{@max_fishing_result_details.water_depth.name}付近でした。"%>
-       <%= "累計釣果記録#{@fishing_result_sum}匹" %>
+          <%= "累計釣果記録#{@fishing_result_sum}匹" %>        
         </div>
 
         <h2 class="page-heading">
@@ -22,6 +23,13 @@
         <div class="user__card">
           <%= render partial: "posts/post" ,collection: @posts %>
         </div>
+        <% else %>
+        <div class="no_information">
+        まだ投稿されたことがありません！
+        <br>いっぱい釣ってワカサギ釣りを楽しみましょう！！！
+        <br>釣れた情報を共有してワカサギ釣りを楽しみましょう！！！
+        </div>
+        <% end %>
       </div>
     </div>
   </div>

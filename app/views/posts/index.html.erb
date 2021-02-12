@@ -22,7 +22,17 @@
       <h2 class="title">
         釣果情報一覧
       </h2>
-
+      <div class="search">
+        <div class="search_box">
+          <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+            <%= form.select :keyword, [["釣れた順", "fishing_result_desc"], 
+                                      ["いいね数順", "likes_count_desc"], 
+                                      ["新着順", "created_at_desc"], 
+                                      ["投稿が古い順", "created_at_asc"]], include_blank: "---選択してください---" %>
+            <%= form.submit "並び替える", class: "search-btn" %>
+          <% end %> 
+        </div>
+      </div>
       <ul class='post-lists'>
         <% @posts.each do |post|%>
         <li class='list'>

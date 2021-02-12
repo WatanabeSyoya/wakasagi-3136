@@ -12,11 +12,12 @@ class Post < ApplicationRecord
     belongs_to :feed
   end
 
-  validates :fishing_result, presence: true
-  validates :title, presence: true, unless: :was_attached?
   def was_attached?
     image.attached?
   end
+
+  validates :fishing_result, presence: true
+  validates :title, presence: true, unless: :was_attached?
 
   with_options numericality: { other_than: 1 } do
     validates :place_id
@@ -24,4 +25,20 @@ class Post < ApplicationRecord
     validates :weather_id
     validates :feed_id
   end
+
+  def self.sort(selection)
+    case selection
+    when 'fishing_result_desc'
+      return all.order(fishing_result: :DESC)
+    when 'likes_count_desc'
+      return all.order(likes_count: :DESC)
+    when 'created_at_desc'
+      return all.order(created_at: :DESC)
+    when 'created_at_desc'
+      return all.order(created_at: :ASC)
+    else
+      return all.order(created_at: :DESC)
+    end
+  end
+
 end
