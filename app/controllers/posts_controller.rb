@@ -50,10 +50,7 @@ class PostsController < ApplicationController
 
   def search
     @posts = Post.sort(params[:keyword])
- end
-
-
-
+  end
 
   private
 

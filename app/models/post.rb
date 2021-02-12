@@ -29,16 +29,15 @@ class Post < ApplicationRecord
   def self.sort(selection)
     case selection
     when 'fishing_result_desc'
-      return all.order(fishing_result: :DESC)
+      all.order(fishing_result: :DESC)
     when 'likes_count_desc'
-      return all.order(likes_count: :DESC)
+      all.order(likes_count: :DESC)
     when 'created_at_desc'
-      return all.order(created_at: :DESC)
+      all.order(created_at: :DESC)
     when 'created_at_desc'
-      return all.order(created_at: :ASC)
+      all.order(created_at: :ASC)
     else
-      return all.order(created_at: :DESC)
+      all.order(created_at: :DESC)
     end
   end
-
 end
