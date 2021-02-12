@@ -102,7 +102,7 @@
 /* アイテム紹介 */
 .item_wrap{
   width: 100%;
-  height: 400px;
+  height: 1000px;
   background-color:#ccffcc;
 }
 /* アイテム紹介 */
@@ -127,7 +127,39 @@
 /* 桧原湖マップ */
 
 /* ページトップへ戻るボタン */
-
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  background: #3f98ef;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
 
 /* フッター */
 .footer {
