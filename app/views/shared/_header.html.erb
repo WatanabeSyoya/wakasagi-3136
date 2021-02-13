@@ -1,3 +1,30 @@
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav class="globalMenuSp">
+    <% if user_signed_in? %>
+      <ul>
+          <li><%= link_to "投稿する", new_post_path %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+          <li><a href="">桧原湖マップ</a></li>
+          <li><a href="https://www.urabandai-inf.com/">桧原湖周辺情報</a></li>
+      </ul>
+    <% else %>
+      <ul>
+          <li><%= link_to "新規登録", new_user_registration_path %></li>
+          <li><%= link_to "ログイン", new_user_session_path %></li>
+          <li><a href="https://www.urabandai-inf.com/">桧原湖周辺情報</a></li>
+      </ul>
+    <% end %>
+</nav>
+
+
+
+
     <header class="header">
       <div class="inner">
         <div class="nav">          
@@ -31,32 +58,34 @@
       <nav id="global_nav">
         <div class="gnav_cnt">
           <div class="gnav_menu">
-          <ul class="gnav_list">
-            <li class="item">
-              <a href="#1" class="gnav_btn">
-               <span class="gnav_title">桧原湖マップ</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#2" class="gnav_btn">
-               <span class="gnav_title">アイテム紹介</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#3" class="gnav_btn">
-               <span class="gnav_title">よくある質問</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="https://www.urabandai-inf.com/" class="gnav_btn">
-               <span class="gnav_title">桧原湖周辺情報</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#4" class="gnav_btn">
-               <span class="gnav_title">釣果情報</span>
-              </a>
-            </li>
+            <ul class="gnav_list">
+              <li class="item">
+                <a href="#1" class="gnav_btn">
+                <span class="gnav_title">桧原湖マップ</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#2" class="gnav_btn">
+                <span class="gnav_title">アイテム紹介</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#3" class="gnav_btn">
+                <span class="gnav_title">よくある質問</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="https://www.urabandai-inf.com/" class="gnav_btn">
+                <span class="gnav_title">桧原湖周辺情報</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#4" class="gnav_btn">
+                <span class="gnav_title">釣果情報</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
