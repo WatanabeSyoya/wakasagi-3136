@@ -14,10 +14,10 @@
         </div>
       </div>
       <div class="box-header-right">
-        <%= link_to "トップページに戻る", root_path %>
+        <%= link_to "トップページに戻る", root_path, class: "nav__btn" %>
         <% if user_signed_in? && current_user.id == @post.user_id %>
-        <%= link_to "削除", post_path(@post.id), method: :delete %>
-        <%= link_to "編集", edit_post_path(@post.id) %>
+        <%= link_to "削除", post_path(@post.id), method: :delete, class: "nav__btn" %>
+        <%= link_to "編集", edit_post_path(@post.id), class: "nav__btn" %>
         <% end %>
       </div>
     </div>
@@ -29,6 +29,7 @@
           </div>
         <% end %>
     </div>
+    <%= render partial: 'likes/like', locals: {post: @post} %>
     <table class="detail-table">
       <tbody>
         <tr>
@@ -61,7 +62,7 @@
         </tr>
       </tbody>
     </table>
-    <%= render partial: 'likes/like', locals: {post: @post} %>
+    
     <div class = "message-box">
         <%= form_with model: [@post,@message] do |f| %>
           <%= f.text_field :text, placeholder:"コメントする", maxlength:"40"%>
