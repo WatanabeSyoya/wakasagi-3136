@@ -27,7 +27,7 @@
 .post-lists {
   display: grid;
   gap: 30px;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)) ;
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)) ;
   margin:auto;
   padding: 20px 5px;
 }
