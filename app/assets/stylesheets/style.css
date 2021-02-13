@@ -57,9 +57,9 @@ a {
 
 .nav__btn{
   display: inline-block;
-  margin-right: 10px;
-  padding: 0.2em 0.3em;
-  font-size: 20px;
+  margin-right: 8px;
+  padding: 0.2em 0.2em;
+  font-size: 18px;
   color: #87CEFA;
   text-decoration: none;
   user-select: none;
@@ -296,7 +296,13 @@ a {
   .header {
     display: none;
   }
-
+  .post-lists {
+    display: grid;
+    gap: 5px;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)) ;
+    margin:auto;
+    padding: 20px 5px;
+  }
 }
 
 @media (min-width: 700px) {
