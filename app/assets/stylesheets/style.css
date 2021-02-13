@@ -299,7 +299,10 @@ a {
 }
 
 @media (min-width: 769px) {
-  .hamburger{
+  .hamburger {
+    display: none;
+  }
+  .globalMenuSp {
     display: none;
   }
 }
