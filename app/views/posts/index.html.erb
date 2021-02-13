@@ -37,21 +37,16 @@
         <% @posts.each do |post|%>
         <li class='list'>
           <%= link_to post_path(post.id) do %>
-            <div class='post-img-content'>
               <%= image_tag post.image, class: "post-img" if post.image.attached?%>
               <% unless post.image.present? %>
-              <div class='temporary-img'>
+              <div class='post-img'>
                 <p class="temporary-img-text">No image</p>
               </div>
               <% end %>
-            </div>
           <% end %>
             <div class='post-info'>
-              <div class='post-title'>
-                <%= post.title %>
-              </div>
               <div class='result'>
-                <%= "釣果：#{post.fishing_result}匹" %><br><%= post.created_at.strftime('%Y/%m/%d') %>
+                <%= "釣果：#{post.fishing_result}匹" %><%= post.created_at.strftime('%Y/%m/%d') %>
               </div>
                 <div class='star-btn'>
                   <%= "#{post.user.nickname}さん" %>
@@ -69,10 +64,6 @@
                 <h3 class='item-name'>
                   投稿してね！
                 </h3>
-                <div class='star-btn'>
-                  <%= image_tag "star.png", class:"star-icon" %>
-                  <span class='star-count'>0</span>
-                </div>
               </div>
             <% end %>
           </li>

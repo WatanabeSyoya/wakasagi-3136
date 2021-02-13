@@ -13,71 +13,40 @@
   position: relative;
 }
 
-.title:after {
-  content: '';
-  width: 180px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 /* 釣果情報 */
 .post_wrap {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color:#ffcc99;
+
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+.search{
+  text-align: center;
 }
 
 .post-lists {
-  width: 100vw;
-  padding-bottom: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  gap: 30px;
+  grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)) ;
+  margin:auto;
+  padding: 20px 5px;
 }
 
 .list {
-  width: 15vh;
-  padding: 1vw;
-  margin: 1px;
-  border-radius: 3px;
-  background-color: #FFF;
+
 }
 
-.post-img-content {
-}
+.post-img {
 
-.post-img{
-
-  height: 10vh;
-  text-align: center;
-}
-.temporary-img {
-  height: 10vh;
-  background-color: #fff8dc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .post-info {
-  background-color: #FFF;
-  color: black;
+
 
 }
 
-.post-title{
-  font-size: 10px;
-  font-weight: bold;
-  text-align: center;
-}
 .result{
   font-size: 10px;
-  text-align: center;
 }
 .star-btn{
   font-size: 10px;
