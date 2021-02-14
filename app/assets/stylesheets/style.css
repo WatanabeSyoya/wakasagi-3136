@@ -303,6 +303,10 @@ a {
     margin:auto;
     padding: 20px 5px;
   }
+  .title{
+    font-size: 18px;
+  }
+
 }
 
 @media (min-width: 700px) {
@@ -312,4 +316,17 @@ a {
   .globalMenuSp {
     display: none;
   }
+  .small_header{
+    display: none;
+  }
 }
+
+@media (max-width: 370px) {
+  .greeting_small{
+    font-size: 13px;
+    top: 16px;
+  }
+
+
+}
+

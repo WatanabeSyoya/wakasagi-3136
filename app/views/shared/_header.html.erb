@@ -1,25 +1,29 @@
-<div class="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
+<div class="small_header">
+  <div class="small_header_wrap">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="globalMenuSp">
+        <% if user_signed_in? %>
+          <ul>
+              <li><%= link_to "投稿する", new_post_path %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+              <li><a href="https://www.urabandai-inf.com/">桧原湖周辺情報</a></li>
+          </ul>
+        <% else %>
+          <ul>
+              <li><%= link_to "新規登録", new_user_registration_path %></li>
+              <li><%= link_to "ログイン", new_user_session_path %></li>
+              <li><a href="https://www.urabandai-inf.com/">桧原湖周辺情報</a></li>
+          </ul>
+        <% end %>
+    </nav>
+    <div class = "greeting_small">ワカサギ釣果情報サイト＜桧原湖版＞</div>
+  </div>
 </div>
-
-<nav class="globalMenuSp">
-    <% if user_signed_in? %>
-      <ul>
-          <li><%= link_to "投稿する", new_post_path %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "マイページ", user_path(current_user.id) %></li>
-          <li><a href="https://www.urabandai-inf.com/">桧原湖周辺情報</a></li>
-      </ul>
-    <% else %>
-      <ul>
-          <li><%= link_to "新規登録", new_user_registration_path %></li>
-          <li><%= link_to "ログイン", new_user_session_path %></li>
-          <li><a href="https://www.urabandai-inf.com/">桧原湖周辺情報</a></li>
-      </ul>
-    <% end %>
-</nav>
 
 
 

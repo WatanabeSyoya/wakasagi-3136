@@ -1,11 +1,31 @@
+.small_header{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow:0 2px 3px 0;
+}
+
+
+
+.greeting_small{
+  font-family: 'M+ Type-1 (general-j) Regular';
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  left: 60px;
+  top: 12px;
+  text-align: center;
+}
 .hamburger {
   display : block;
-  position: fixed;
+  position: absolute;
   z-index : 3;
-  right : 13px;
-  top   : 12px;
+
+  top   : 5px;
   width : 42px;
-  height: 42px;
+  height: 30px;
   cursor: pointer;
   text-align: center;
 }
@@ -13,9 +33,10 @@
   display : block;
   position: absolute;
   width   : 30px;
-  height  : 2px ;
+  height  : 4px ;
   left    : 6px;
-  background : #555;
+  border-radius: 3px;
+  background : #6b4d1e;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition   : 0.3s ease-in-out;
   transition        : 0.3s ease-in-out;
@@ -55,7 +76,7 @@ nav.globalMenuSp {
   top  : 0;
   left : 0;
   color: #fff;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.8);
   text-align: center;
   width: 100%;
   opacity: 0;

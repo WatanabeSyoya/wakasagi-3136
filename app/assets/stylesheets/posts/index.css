@@ -6,11 +6,12 @@
 .title {
   font-family: "Noto Serif Japanese", serif, san-serif;
   font-weight: 700;
-  font-size: 2.333rem;
+  font-size: 2rem;
   color: #6b4d1e;
   text-align: center;
   margin-bottom: 5vh;
   position: relative;
+  padding-top: 20px;
 }
 
 
@@ -46,24 +47,31 @@
 }
 
 .result{
-  font-size: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-.star-btn{
-  font-size: 10px;
-}
-.star-icon{
-  width: 12px;
+.message_txt{
+  color: black;
+  font-size: 14px;
+  display: inline-block;
+
 }
 
 .iine__button{
-  background: linear-gradient(to right, #feb400, #FFE300);
-  line-height: 42px;
-  color: #6d3701;
+  color: black;
   font-size: 14px;
   display: inline-block;
   padding: 0 18px;
-  border-radius: 100px;
-  font-weight: bold;
+}
+
+.sukima{
+  margin: 0 10px;
+}
+
+
+.info_header{
+  display: flex;
 }
 /* 釣果情報 */
 

@@ -4,7 +4,7 @@ $(function(){
     auto: true,
     autoControls: true,
     stopAutoOnClick: true,
-    pager: false,
+    pager: true,
     pause: 6000
 
   });
