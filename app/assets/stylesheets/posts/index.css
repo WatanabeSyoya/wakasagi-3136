@@ -33,18 +33,8 @@
   padding: 20px 5px;
 }
 
-.list {
-
-}
-
-.post-img {
-
-}
-
-.post-info {
 
 
-}
 
 .result{
   font-size: 14px;
@@ -79,7 +69,7 @@
 /* アイテム紹介 */
 .item_wrap{
   width: 100%;
-  height: 1000px;
+  height: 500px;
   background-color:#ccffcc;
 }
 /* アイテム紹介 */
@@ -88,7 +78,7 @@
 /* よくある質問 */
 .faq_wrap{
   width: 100%;
-  height: 800px;
+  height: 500px;
   background: -moz-linear-gradient(#ffb03c, #ff708d);
   background: -webkit-linear-gradient(#ffb03c, #ff708d);
   background: linear-gradient(to right, #ffb03c, #ff708d);
@@ -98,7 +88,7 @@
 /* 桧原湖マップ */
 .map_wrap{
   width: 100%;
-  height: 1200px;
+  height: 1000px;
   background-color:#ffffcc;
 }
 /* 桧原湖マップ */

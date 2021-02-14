@@ -1,42 +1,5 @@
-.home-btn{
-  font-size: 60px;
+.users-box {
 
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
 }
-
-.user_inner{
-  width: 85%;
-  margin: auto;
-}
-
-.user__card{
-
-}
-.card_box{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  background-color: burlywood;
-}
-.card {
-  position: relative;
-  width: 30%;
-  margin-left: 2.5%;
-  
-  }
-
-.card__body {
-  position: absolute;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-  font-family :Quicksand, sans-serif;
-  top: 85%;
-  left: 50%;
-  }
-
-.card__img {
-  width: 100%;
-  }
-

@@ -2,86 +2,89 @@
 
 <div class="post-show">
   <div class="post-box">
-    <%= link_to "トップページに戻る", root_path, class: "nav__btn" %>
-    <div class="box-header">
-        <h2 class="name">
-          <%= link_to "#{@post.user.nickname}さん",  user_path(@post.user.id)%>
-        </h2>
-    </div>
-      <div class="box-header-right">        
-        <% if user_signed_in? && current_user.id == @post.user_id %>
-          <%= link_to "削除", post_path(@post.id), method: :delete, class: "nav__btn" %>
-          <%= link_to "編集", edit_post_path(@post.id), class: "nav__btn" %>
-        <% end %>
-      </div>
-    <div class="item-img-content">
-      <%= image_tag @post.image  if @post.image.attached?%>
-        <% unless @post.image.present? %>
-          <div class='temporary-img'>
-          <%= image_tag "image7.png", class: "item-img" %>
-          <p class="temporary-img-text">No image</p>
-          </div>
-        <% end %>
-    </div>
-    <div class='post-info'>
-      <div class="info_header">
-        <div class="message_txt">&#x1f4ac;
-        <%= "#{Message.where(post_id:@post.id).count}" %>
+        <%= link_to "トップページに戻る", root_path, class: "nav__btn" %>
+        <div class="box-header">
+            <h2 class="name">
+              <%= link_to "#{@post.user.nickname}さん",  user_path(@post.user.id)%>
+            </h2>
         </div>
-        <div class="like_txt">
-        <%= render partial: 'likes/like', locals: {post: @post} %>
-        </div>
-        <div><%= @post.created_at.strftime('%Y/%m/%d') %></div>
-      </div>
-      
-      </div>       
-    </div>          
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-post">投稿タイトル</th>
-          <td class="detail-value"><%= @post.title %></td>
-        </tr>
-        <tr>
-          <th class="detail-post">釣果</th>
-          <td class="detail-value"><%= "#{@post.fishing_result}匹" %></td>
-        </tr>
-        <tr>
-          <th class="detail-post">釣り場</th>
-          <td class="detail-value"><%= @post.place.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-post">棚</th>
-          <td class="detail-value"><%= "水面から#{@post.water_depth.name}付近" %></td>
-        </tr>
-        <tr>
-          <th class="detail-post">天気</th>
-          <td class="detail-value"><%= @post.weather.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-post">エサ</th>
-          <td class="detail-value"><%= @post.feed.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-post">説明文</th>
-          <td class="detail-value"><%= @post.post_text %></td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <div class = "message-box">
-        <%= form_with model: [@post,@message] do |f| %>
-          <%= f.text_field :text, placeholder:"コメントする", maxlength:"40"%>
-          <%= f.submit '投稿する' %>
-        <% end %>
-        <div id='messages'>
-          <% @messages.reverse_each do |message| %>
-            <p><%= "#{message.user.nickname}さん" %><%= l message.created_at %>
-            <br><%= message.text %></p>
-            
+        <div class="box-header-right">        
+          <% if user_signed_in? && current_user.id == @post.user_id %>
+            <%= link_to "削除", post_path(@post.id), method: :delete, class: "nav__btn" %>
+            <%= link_to "編集", edit_post_path(@post.id), class: "nav__btn" %>
           <% end %>
         </div>
-    </div>
+        <div class="item-img-content">
+          <%= image_tag @post.image  if @post.image.attached?%>
+            <% unless @post.image.present? %>
+              <div class='temporary-img'>
+              <%= image_tag "image7.png", class: "item-img" %>
+              </div>
+            <% end %>
+        </div>
+
+        <div class="info_header-show">
+          <div class="message_txt">&#x1f4ac;
+          <%= "#{Message.where(post_id:@post.id).count}" %>
+          </div>
+          <div class="like_txt">
+          <%= render partial: 'likes/like', locals: {post: @post} %>
+          </div>
+          <div><%= @post.created_at.strftime('%Y/%m/%d') %></div>
+        </div>
+      
+       
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-post">投稿タイトル</th>
+            <td class="detail-value"><%= @post.title %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">釣果</th>
+            <td class="detail-value"><%= "#{@post.fishing_result}匹" %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">釣り場</th>
+            <td class="detail-value"><%= @post.place.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">棚</th>
+            <td class="detail-value"><%= "水面から#{@post.water_depth.name}付近" %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">天気</th>
+            <td class="detail-value"><%= @post.weather.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">エサ</th>
+            <td class="detail-value"><%= @post.feed.name %></td>
+          </tr>
+          <tr>
+            <%if @post.post_text.present? %>
+            <th class="detail-post">説明文</th>
+            <td class="detail-value"><%= @post.post_text  %></td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+    
+      <div class = "message-box">
+          <%= form_with model: [@post,@message], class: "message_form" do |f| %>
+            <%= f.text_field :text, placeholder:"コメントする", maxlength:"40",class: "message_form_box" %>
+            <%= f.submit '投稿する',class: "message_form_btn" %>
+          <% end %>
+          ＜コメント一覧＞
+          <div id='messages'>
+            <% @messages.reverse_each do |message| %>
+              <div class="message_text">
+                <p><%= link_to "#{@post.user.nickname}さん",  user_path(@post.user.id), class: "message_name"%>
+                <span class="message_text_sukima"><%= l message.created_at %></span>
+                <br><%= message.text %></p>
+              </div>
+            <% end %>
+          </div>
+      </div>
   </div>
 </div>
 
@@ -89,5 +92,5 @@
 
 
 
-</div>  
+
 
