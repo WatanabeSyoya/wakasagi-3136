@@ -33,14 +33,14 @@
   padding: 20px 5px;
 }
 
+.post-info{
+  width: 100%;
+  margin-bottom: 30px;
 
-
-
-.result{
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 10px;
 }
+
+
+
 .message_txt{
   color: black;
   font-size: 14px;

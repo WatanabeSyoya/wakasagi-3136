@@ -10,8 +10,11 @@
 }
 
 .name{
-  border-bottom: solid 2px #5989cf;
   background-color: peachpuff;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 4px;
+
 }
 
 .item-img-content{

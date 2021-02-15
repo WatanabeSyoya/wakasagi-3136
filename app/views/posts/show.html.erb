@@ -78,7 +78,7 @@
           <div id='messages'>
             <% @messages.reverse_each do |message| %>
               <div class="message_text">
-                <p><%= link_to "#{@post.user.nickname}さん",  user_path(@post.user.id), class: "message_name"%>
+                <p><%= link_to "#{message.user.nickname}さん",  user_path(message.user.id), class: "message_name"%>
                 <span class="message_text_sukima"><%= l message.created_at %></span>
                 <br><%= message.text %></p>
               </div>

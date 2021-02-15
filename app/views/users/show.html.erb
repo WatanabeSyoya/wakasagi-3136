@@ -8,12 +8,13 @@
         </h2>
         <div class="user_details">
         <% if @user.posts.present? %>
-            <%= "一番釣れた日は#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}
+          <%= "累計釣果記録#{@fishing_result_sum}匹" %>
+            <br><%= "一番釣れた日は#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}
                             (#{@max_fishing_result_details.weather.name})"%><br>
             <%= "釣果は#{@max_fishing_result}匹"%><br>
             <%= "その時のエサは#{@max_fishing_result_details.feed.name}で、"%>
             <%= "釣り場は#{@max_fishing_result_details.place.name}で、棚は水面から#{@max_fishing_result_details.water_depth.name}付近でした。"%>
-            <%= "累計釣果記録#{@fishing_result_sum}匹" %>        
+                    
           </div>
           <h2 class="page-heading">
             <%= "#{@user.nickname}さんの釣果情報"%>
