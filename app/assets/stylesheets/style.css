@@ -86,12 +86,20 @@ a {
 
 .greeting {
   font-family: 'M+ Type-1 (general-j) Regular';
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 500;
-
+  padding: 5px 5px;
 }
+.greeting:hover{
+  color: #fff;
+  background-color: #87CEFA;
+
+  border-radius: 5px;
+  transition: 0.4s ;
+}
+
 .greeting_small{
-  padding: 2px 3px;
+  padding: 3px 5px;
 }
 .greeting_small:hover{
   color: #fff;
