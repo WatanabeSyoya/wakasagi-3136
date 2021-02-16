@@ -88,14 +88,14 @@ a {
   font-family: 'M+ Type-1 (general-j) Regular';
   font-size: 24px;
   font-weight: 500;
-  padding: 5px 5px;
+  padding: 7px 10px;
 }
 .greeting:hover{
   color: #fff;
   background-color: #87CEFA;
 
   border-radius: 5px;
-  transition: 0.4s ;
+  transition: 0.7s ;
 }
 
 .greeting_small{
@@ -168,7 +168,7 @@ a {
   font-size: 20px;
   font-weight: 500;
   font-family: "Noto Serif Japanese", serif, san-serif;
-  color: #8B4513;
+  color: #B22222;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,8 +177,8 @@ a {
 }
 
 .gnav_title:hover{
-  color: gray;
-  transition: 0.6s ease;
+  color: #A9A9A9;
+  transition: 0.7s ease;
 }
 
 /* フォーム周り */
