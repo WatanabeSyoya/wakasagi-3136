@@ -1,6 +1,6 @@
 # アプリケーション名: ワカサギ釣果情報サイト
 
-# 概要
+## 概要
 
 ### テーブル設計
 
@@ -12,7 +12,7 @@ usersテーブル
 | encrypted_password  | string  | null: false  |
 | skill               | string  | null: false  |
 
-### Association
+Association
 - has_many :posts
 - has_many :messages
 - has_many :likes
