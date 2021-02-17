@@ -330,6 +330,9 @@ a {
     font-size: 18px;
   }
 
+  .post_wrap {
+    width: 100%;
+  }
 }
 
 @media (min-width: 700px) {
