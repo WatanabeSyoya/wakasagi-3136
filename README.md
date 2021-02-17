@@ -33,7 +33,7 @@ https://wakasagi-3136.herokuapp.com/
 ![d3e5dcb1c85fd0d534b020d9579d13ce](https://user-images.githubusercontent.com/76427150/108166185-2b634c80-7137-11eb-85b9-0739a71d455f.gif)
 
 ### 投稿詳細
-[![Image from Gyazo](https://i.gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce.gif)](https://gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce)
+[![Image from Gyazo](https://i.gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82.gif)](https://gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82)
 ## データベース設計
 
 ### ER図
