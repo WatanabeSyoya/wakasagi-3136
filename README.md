@@ -29,10 +29,10 @@ https://wakasagi-3136.herokuapp.com/
 ### トップ画面2
 
 ### トップ画面3
-https://i.gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82.gif
+
 
 ### 投稿詳細
-
+[![Image from Gyazo](https://i.gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82.gif)](https://gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82)
 ## データベース設計
 
 ### ER図
