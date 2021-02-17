@@ -26,10 +26,11 @@ https://wakasagi-3136.herokuapp.com/
 
 ### トップ画面1
 
+
 ### トップ画面2
 
 ### トップ画面3
-
+![d3e5dcb1c85fd0d534b020d9579d13ce](https://user-images.githubusercontent.com/76427150/108166185-2b634c80-7137-11eb-85b9-0739a71d455f.gif)
 
 ### 投稿詳細
 [![Image from Gyazo](https://i.gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce.gif)](https://gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce)
