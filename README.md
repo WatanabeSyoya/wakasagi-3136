@@ -29,7 +29,7 @@ https://wakasagi-3136.herokuapp.com/
 ### トップ画面2
 
 ### トップ画面3
-[![Image from Gyazo](https://i.gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce.gif)](https://gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce)
+https://i.gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82.gif
 
 ### 投稿詳細
 
