@@ -5,7 +5,7 @@ $(function(){
     autoControls: true,
     stopAutoOnClick: true,
     pager: true,
-    pause: 6000
+    pause: 5000
 
   });
 });

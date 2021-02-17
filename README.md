@@ -1,3 +1,7 @@
+## アプリケーション名: ワカサギ釣果情報サイト
+
+
+
 # テーブル設計
 
 ## usersテーブル
@@ -56,4 +60,4 @@
 - belongs_to :user
 - belongs_to :post
 
-![スクリーンショット 2021-02-17 12 03 34](https://user-images.githubusercontent.com/76427150/108150564-335fc400-7118-11eb-95e3-b9177555aada.png)
+
