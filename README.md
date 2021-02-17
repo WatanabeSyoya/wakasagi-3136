@@ -1,12 +1,41 @@
-# アプリケーション名: ワカサギ釣果情報サイト
-
-
+# アプリケーション名:『ワカサギ釣果情報サイト』
 
 
 ## 概要
+ワカサギ釣りでの釣った情報を共有出来るアプリ
+
+## URL
+https://wakasagi-3136.herokuapp.com/
+
+## 利用方法
+
+## テスト用アカウント
+email: s@s
+pw: 111111a
+
+## 利用方法
+
+## 目指した課題解決
+
+## 洗い出した要件
+
+## 機能
+
+
+
+
+### トップ画面
+[![Image from Gyazo](https://i.gyazo.com/a9471d0b0b86de7e0fe2394077cc4511.gif)](https://gyazo.com/a9471d0b0b86de7e0fe2394077cc4511)
+[![Image from Gyazo](https://i.gyazo.com/559a02cdcbfce9af16cf3122767dfe33.gif)](https://gyazo.com/559a02cdcbfce9af16cf3122767dfe33)
+[![Image from Gyazo](https://i.gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce.gif)](https://gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce)
+### 投稿詳細
+[![Image from Gyazo](https://i.gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82.gif)](https://gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82)
+## データベース設計
+
+### ER図
+[![Image from Gyazo](https://i.gyazo.com/2f2396d8a90d58d9ab06fd6edf5df865.png)](https://gyazo.com/2f2396d8a90d58d9ab06fd6edf5df865)
 
 ### テーブル設計
-
 usersテーブル
 | Column              | Type    | Options      |
 | ------------------- | ------  | -----------  |
@@ -21,7 +50,7 @@ Association
 - has_many :likes
 
 
-## postsテーブル
+postsテーブル
 | Column               | Type        | Options            |
 | -------------------- | ----------- | ------------------ |
 | title                | string      | null: false        |
@@ -33,33 +62,33 @@ Association
 | feed_id              | integer     | null: false        |
 | user                 | references  | foreign_key: true  |
 
-### Association
+Association
 - belongs_to :user
 - has_many :messages
 - has_many :likes
 
 
 
-## messagesテーブル
+messagesテーブル
 | Column  | Type        | Options            |
 | ------- | ----------- | ------------------ |
 | text    | text        | null: false        |
 | post    | references  | foreign_key: true  |
 | user    | references  | foreign_key: true  |
 
-### Association
+Association
 - belongs_to :user
 - belongs_to :post
 
 
 
-##  likesテーブル
+likesテーブル
 | Column  | Type        | Options            |
 | ------- | ----------- | ------------------ |
 | post    | references  | foreign_key: true  |
 | user    | references  | foreign_key: true  |
 
-### Association
+Association
 - belongs_to :user
 - belongs_to :post
 
