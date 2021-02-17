@@ -26,13 +26,7 @@ https://wakasagi-3136.herokuapp.com/
 
 ### トップ画面1
 [![Image from Gyazo](https://i.gyazo.com/a9471d0b0b86de7e0fe2394077cc4511.gif)](https://gyazo.com/a9471d0b0b86de7e0fe2394077cc4511)
-### トップ画面2
-[![Image from Gyazo](https://i.gyazo.com/559a02cdcbfce9af16cf3122767dfe33.gif)](https://gyazo.com/559a02cdcbfce9af16cf3122767dfe33)
-### トップ画面3
-[![Image from Gyazo](https://i.gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce.gif)](https://gyazo.com/d3e5dcb1c85fd0d534b020d9579d13ce)
 
-### 投稿詳細
-[![Image from Gyazo](https://i.gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82.gif)](https://gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82)
 ## データベース設計
 
 ### ER図
