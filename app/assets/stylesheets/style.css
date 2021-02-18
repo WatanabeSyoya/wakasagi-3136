@@ -333,6 +333,11 @@ a {
   .post_wrap {
     width: 100%;
   }
+  .post-info{
+    font-size: 14px;
+  } 
+
+
 }
 
 @media (min-width: 700px) {

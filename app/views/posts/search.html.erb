@@ -26,8 +26,12 @@
                 <%= image_tag "image7.png", class: "item-img" %>
               </div>
               <% end %>
-          <% end %>
             <div class='post-info'>
+              <%= link_to "#{post.user.nickname}さん",  user_path(post.user.id)%>
+              <span class="sukima"><%= post.created_at.strftime('%Y/%m/%d') %></span>
+              <div class='result'>
+                <%= "釣果：#{post.fishing_result}匹" %>               
+              </div>
               <div class="info_header">
                 <div class="message_txt">&#x1f4ac;
                 <%= "#{Message.where(post_id:post.id).count}" %>
@@ -35,13 +39,9 @@
                 <div class="like_txt">
                 <%= render partial: 'likes/like', locals: {post: post} %>
                 </div>
-              </div>
-              <div class='result'>
-                <%= "釣果：#{post.fishing_result}匹" %>
-                <span class="sukima"><%= post.created_at.strftime('%Y/%m/%d') %></span>
-                <br><%= "#{post.user.nickname}さん" %>
-              </div>       
-            </div>          
+              </div>                    
+            </div> 
+          <% end %>         
         </li>
         <% end %>
 
