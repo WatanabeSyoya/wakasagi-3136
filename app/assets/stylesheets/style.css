@@ -336,7 +336,13 @@ a {
   .post-info{
     font-size: 14px;
   } 
-
+  .message_txt{
+    font-size: 14px;
+  }
+  
+  .iine__button{
+    font-size: 14px;
+  }
 
 }
 
