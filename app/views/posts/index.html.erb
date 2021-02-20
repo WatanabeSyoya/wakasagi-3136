@@ -22,67 +22,71 @@
  
   <div class="wakasagi-contents">
     <%# 投稿一覧 %>
-    <div class="post_wrap" id="4">
-      <h2 class="title">
-        釣果情報一覧
-      </h2>
-      <div class="search">
-        <div class="search_box">
-          <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
-          <%= form.select :keyword, [["---選択してください---", "first"],["釣れた順", "fishing_result_desc"], 
-                                    ["いいね数順", "likes_count_desc"], 
-                                    ["新着順", "created_at_desc"], 
-                                    ["投稿が古い順", "created_at_asc"]] %>
-          <%= form.submit "並び替える", class: "search-btn" %>
-          <% end %> 
+    <div class="post_contents">
+      <div class="post_wrap" id="4">
+        <h2 class="title">
+          釣果情報一覧
+        </h2>
+        <div class="search">
+          <div class="search_box">
+            <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+            <%= form.select :keyword, [["---選択してください---", "first"],["釣れた順", "fishing_result_desc"], 
+                                      ["いいね数順", "likes_count_desc"], 
+                                      ["新着順", "created_at_desc"], 
+                                      ["投稿が古い順", "created_at_asc"]] %>
+            <%= form.submit "並び替える", class: "search-btn" %>
+            <% end %> 
+          </div>
         </div>
-      </div>
-      <ul class='post-lists'>
-        <% @posts.each do |post|%>
-        <li class='list'>
-          <%= link_to post_path(post.id) do %>
-              <%= image_tag post.image, class: "post-img" if post.image.attached?%>
-              <% unless post.image.present? %>
-              <div class='post-img'>
-                <%= image_tag "image7.png", class: "item-img" %>
-              </div>
-              <% end %>
-            <div class='post-info'>
-              <%= link_to "#{post.user.nickname}さん",  user_path(post.user.id)%>
-              <span class="sukima"><%= post.created_at.strftime('%Y/%m/%d') %></span>
-              <div class='result'>
-                <%= "釣果：#{post.fishing_result}匹" %>               
-              </div>
-              <div class="info_header">
-                <div class="message_txt">&#x1f4ac;
-                <%= "#{Message.where(post_id:post.id).count}" %>
-                </div>
-                <div class="like_txt">
-                <%= render partial: 'likes/like', locals: {post: post} %>
-                </div>
-              </div>                    
-            </div> 
-          <% end %>         
-        </li>
-        <% end %>
-
-        <% if @posts.length == 0  %>
+        <ul class='post-lists'>
+          <% @posts.each do |post|%>
           <li class='list'>
-            <%= link_to '/' do %>
-              <%= image_tag "image7.png", class: "item-img" %>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                  投稿してね！
-                </h3>
+            <%= link_to post_path(post.id) do %>
+             <div class="img_wrap">
+                <%= image_tag post.image, class: "post-img" if post.image.attached?%>
+                <% unless post.image.present? %>
+                <div class='post-img'>
+                  <%= image_tag "image7.png", class: "item-img" %>
+                </div>
+                <% end %>
               </div>
-            <% end %>
+              <div class='post-info'>
+                <%= link_to "#{post.user.nickname}さん",  user_path(post.user.id)%>
+                <span class="sukima"><%= post.created_at.strftime('%Y/%m/%d') %></span>
+                <div class='result'>
+                  <%= "釣果：#{post.fishing_result}匹" %>               
+                </div>
+                <div class="info_header">
+                  <div class="message_txt">&#x1f4ac;
+                  <%= "#{Message.where(post_id:post.id).count}" %>
+                  </div>
+                  <div class="like_txt">
+                  <%= render partial: 'likes/like', locals: {post: post} %>
+                  </div>
+                </div>                    
+              </div> 
+            <% end %>         
           </li>
-        <% end %>
-      </ul>
+          <% end %>
+
+          <% if @posts.length == 0  %>
+            <li class='list'>
+              <%= link_to '/' do %>
+                <%= image_tag "image7.png", class: "item-img" %>
+                <div class='item-info'>
+                  <h3 class='item-name'>
+                    投稿してね！
+                  </h3>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
     <%# /投稿一覧部分 %>
 
-  <%# 桧原湖周辺情報 %>
+  <%# アイテム紹介 %>
 
     <div class="item_wrap" id="2">
       <h2 class="title">
@@ -91,9 +95,9 @@
       <ul class='item-lists'>
       </ul>
     </div>
-    <%# /投稿一覧部分 %>
+    <%# /アイテム紹介 %>
 
-    <%# 投稿一覧 %>
+    <%# よくある質問 %>
     <div class="faq_wrap" id="3">
       <h2 class="title">
         よくある質問
@@ -101,9 +105,9 @@
       <ul class='faq-lists'>
       </ul>
     </div>
-    <%# /投稿一覧部分 %>
+    <%# /よくある質問 %>
 
-    <%# 投稿一覧 %>
+    <%# 桧原湖マップ %>
     <div class="map_wrap" id="1">
       <h2 class="title">
         桧原湖マップ
@@ -111,7 +115,7 @@
       <div class="map">
       </div>
     </div>
-    <%# /投稿一覧部分 %>
+    <%# /桧原湖マップ %>
   </div>
 <div id="page_top"><a href="#"></a></div>
 </main>

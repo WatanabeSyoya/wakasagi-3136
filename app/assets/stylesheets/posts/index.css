@@ -16,17 +16,16 @@
 
 
 /* 釣果情報 */
+.post_contents{
+  background-color: #FAFAFA;
+}
 .post_wrap {
   width: 80%;
   margin: auto;
-
+  
 }
 .search{
   text-align: center;
-}
-
-.list:hover{
-  background-color: beige;
 }
 
 .post-lists {
@@ -35,6 +34,23 @@
   grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)) ;
   margin:auto;
   padding: 20px 5px;
+}
+.list{
+  background-color: #fff;
+}
+.list:hover{
+  background-color: #B1EAFC;
+}
+.img_wrap{
+  overflow: hidden;
+}
+.img_wrap img{
+  width: 100%;
+  transition-duration: 0.5s;
+}
+.img_wrap:hover img{
+  transform: scale(1.08);
+  transition-duration: 0.5s;
 }
 
 .post-info{
@@ -47,16 +63,14 @@
 
 .message_txt{
   color: black;
-  font-size: 18px;
-  display: inline-block;
+  font-size: 16px;
 
 }
 
 .iine__button{
   color: black;
-  font-size: 18px;
-  display: inline-block;
-  padding: 0 18px;
+  font-size: 16px;
+  padding: 0 16px;
 }
 
 .sukima{

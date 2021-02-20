@@ -343,6 +343,35 @@ a {
   .iine__button{
     font-size: 14px;
   }
+  /* 投稿詳細 */
+  .detail-post {
+    font-size: 14px;
+  }
+  
+  .detail-value {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .info_header-show .message_txt {
+    font-size: 16px;
+  }
+  .info_header-show .iine__button {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  .info_header-show{
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .info_header-show{
+    font-size: 16px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+
+  /* 投稿詳細 */
 
 }
 

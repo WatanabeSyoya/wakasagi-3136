@@ -27,6 +27,14 @@
   margin-bottom: 20px;
 }
 
+.info_header-show .message_txt {
+  font-size: 20px;
+}
+.info_header-show .iine__button {
+  font-size: 20px;
+  padding: 0 20px;
+}
+
 .detail-table {
   margin-bottom: 30px;
   width: 100%;
@@ -39,7 +47,7 @@
   width: 30%;
   background-color: #eee;
   border: 1px solid #dedede;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -47,7 +55,7 @@
   width: 70%;
   padding: 20px;
   border: 1px solid #dedede;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 
