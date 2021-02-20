@@ -19,6 +19,7 @@
 
 .item-img-content{
   width: 100%;
+  max-width: 650px;
 }
 
 .info_header-show{
@@ -82,10 +83,6 @@
   width: 25%;
 }
 
-#messages{
-  
-}
-
 
 .message_text{
   padding: 0.2em 0.5em;
@@ -96,7 +93,6 @@
 }
 .message_name{
   color:darkblue;
-  cursor: pointer;
   font-weight: bold;
 }
 .message_text_sukima{
