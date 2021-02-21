@@ -1,1 +1,59 @@
+.user_page{
+  width: 95%;
+  margin: 10px auto;
+}
 
+.user__wrapper_header{
+  margin: 10px 0;
+}
+
+
+.users-box{
+  width: 100%;
+}
+
+.user-lists {
+ display: flex;
+ justify-content: flex-start;
+ flex-wrap: wrap;
+}
+
+.user-list{
+  width: 33%;
+  margin: 2px;
+  position: relative;
+}
+.user-post-img{
+  border-radius: 2px;
+}
+
+.user-lists span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255,0.8);
+  padding:0 5px;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+.page-heading{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+
+
+
+
+.user-lists span{
+    font-size: 16px;
+}
+.user-list{
+  width: 48%;
+}
+.user_page{
+  width: 100%;
+
+}
+}

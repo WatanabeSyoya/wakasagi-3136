@@ -3,18 +3,16 @@
   margin: 10px auto;
 }
 .box-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
 
 }
 
 .name{
-  background-color: peachpuff;
-  margin: 10px 0;
-  border-radius: 5px;
-  padding: 4px;
-
+  display: inline-block;
+  padding: 1px;
+  font-size: 20px;
+  border-bottom: 2px black solid;
+  margin-bottom: 5px;
 }
 
 .item-img-content{
@@ -102,4 +100,10 @@
 .message_text p {
   margin: 0; 
   padding: 0;
+}
+
+@media (max-width: 700px) {
+  .post-box{
+    width: 100%;
+  }
 }
