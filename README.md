@@ -19,7 +19,7 @@ https://wakasagi-3136.herokuapp.com/
 
 
 ### トップページ画面
-[![Image from Gyazo](https://i.gyazo.com/6cd4abeadcf657659e2221f6b0adc9b8.gif)](https://gyazo.com/6cd4abeadcf657659e2221f6b0adc9b8)
+https://media.giphy.com/media/DiqCniRIm3Eaj26gBy/giphy.gif
 
 ### 投稿詳細
 [![Image from Gyazo](https://i.gyazo.com/3e9d33cc09896954efe043e4b2c44774.gif)](https://gyazo.com/3e9d33cc09896954efe043e4b2c44774)
