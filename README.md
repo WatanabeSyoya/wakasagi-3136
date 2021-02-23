@@ -3,6 +3,7 @@
 
 ## 概要
 釣った魚の情報を投稿して釣りの情報が共有できるアプリです
+<br>開発期間（約 2 週間）
 [![Image from Gyazo](https://i.gyazo.com/8e05da0d0f8ec658154afb002fe8014a.jpg)](https://gyazo.com/8e05da0d0f8ec658154afb002fe8014a)
 ## URL
 https://wakasagi-3136.herokuapp.com/
@@ -45,7 +46,6 @@ https://wakasagi-3136.herokuapp.com/
 - コメント機能：Action Cable
 - 画像投稿： ActiveStorage
 - 使用マシン：Mac Big Sur(11.1)
-- 開発期間（約 2 週間）
 
 
 
