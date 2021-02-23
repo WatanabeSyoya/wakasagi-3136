@@ -36,7 +36,7 @@ https://wakasagi-3136.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/2f2396d8a90d58d9ab06fd6edf5df865.png)](https://gyazo.com/2f2396d8a90d58d9ab06fd6edf5df865)
 
 ### テーブル設計
-usersテーブル
+#### usersテーブル
 | Column              | Type    | Options      |
 | ------------------- | ------  | -----------  |
 | nickname            | string  | null: false  |
@@ -50,7 +50,8 @@ Association
 - has_many :likes
 
 
-postsテーブル
+
+#### postsテーブル
 | Column               | Type        | Options            |
 | -------------------- | ----------- | ------------------ |
 | title                | string      | null: false        |
@@ -69,7 +70,7 @@ Association
 
 
 
-messagesテーブル
+#### messagesテーブル
 | Column  | Type        | Options            |
 | ------- | ----------- | ------------------ |
 | text    | text        | null: false        |
@@ -82,7 +83,7 @@ Association
 
 
 
-likesテーブル
+#### likesテーブル
 | Column  | Type        | Options            |
 | ------- | ----------- | ------------------ |
 | post    | references  | foreign_key: true  |
