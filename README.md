@@ -2,22 +2,15 @@
 
 
 ## 概要
-ワカサギ釣りでの釣った情報を共有出来るアプリ
+釣った魚の情報を投稿して釣りの情報が共有できるアプリです
 
 ## URL
 https://wakasagi-3136.herokuapp.com/
 
-## 利用方法
 
 ## テスト用アカウント
 * email: s@s
 * pw: 111111a
-
-## 利用方法
-
-## 目指した課題解決
-
-## 洗い出した要件
 
 ## 機能
 
@@ -26,14 +19,14 @@ https://wakasagi-3136.herokuapp.com/
 
 
 ### トップページ画面
-![d3e5dcb1c85fd0d534b020d9579d13ce](https://user-images.githubusercontent.com/76427150/108166185-2b634c80-7137-11eb-85b9-0739a71d455f.gif)
+[![Image from Gyazo](https://i.gyazo.com/6cd4abeadcf657659e2221f6b0adc9b8.gif)](https://gyazo.com/6cd4abeadcf657659e2221f6b0adc9b8)
 
 ### 投稿詳細
-[![Image from Gyazo](https://i.gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82.gif)](https://gyazo.com/a1a22fc8b5b1eef36b57c1c43060eb82)
+[![Image from Gyazo](https://i.gyazo.com/3e9d33cc09896954efe043e4b2c44774.gif)](https://gyazo.com/3e9d33cc09896954efe043e4b2c44774)
 ## データベース設計
 
 ### ER図
-[![Image from Gyazo](https://i.gyazo.com/2f2396d8a90d58d9ab06fd6edf5df865.png)](https://gyazo.com/2f2396d8a90d58d9ab06fd6edf5df865)
+[![Image from Gyazo](https://i.gyazo.com/15766ef3ce239da1fee234a75e2b4724.png)](https://gyazo.com/15766ef3ce239da1fee234a75e2b4724)
 
 ### テーブル設計
 #### usersテーブル
