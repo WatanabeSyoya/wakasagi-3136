@@ -112,7 +112,49 @@
       <h2 class="title">
         桧原湖マップ
       </h2>
-      <div class="map">
+      <div class="map_box">
+        <input id="address" type="textbox" value="場所の名前を入力">
+        <input type="button" value="地図を検索" onclick="codeAddress()">
+        <div id="display">緯度,経度(37.6831667,140.0590371)</div>
+        <div id='map'>
+        </div>
+        <script>
+        let map
+
+        function initMap(){
+          geocoder = new google.maps.Geocoder()
+
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 37.6831667, lng:140.0590371},
+            zoom: 13,
+          });
+
+          marker = new google.maps.Marker({
+            position:  {lat: 40.7828, lng:-73.9653},
+            map: map
+          });
+        }
+
+        let geocoder
+
+        function codeAddress(){
+          let inputAddress = document.getElementById('address').value;
+
+          geocoder.geocode( { 'address': inputAddress}, function(results, status) {
+            if (status == 'OK') {
+              map.setCenter(results[0].geometry.location);
+              var marker = new google.maps.Marker({
+                  map: map,
+                  position: results[0].geometry.location
+              });
+              display.textContent = "検索結果：" + results[ 0 ].geometry.location
+            } else {
+              alert('該当する結果がありませんでした：' + status);
+            }
+          });   
+        }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHqUkfEeMRFVEgs2xV6K0sQXjroMU533c&callback=initMap" async defer></script>
       </div>
     </div>
     <%# /桧原湖マップ %>
