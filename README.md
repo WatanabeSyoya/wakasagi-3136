@@ -37,8 +37,7 @@ https://wakasagi-3136.herokuapp.com/
 ### 投稿一覧
 [![Image from Gyazo](https://i.gyazo.com/daeaa2bdc7f1a781559d3aa64187da8c.jpg)](https://gyazo.com/daeaa2bdc7f1a781559d3aa64187da8c)
 ### 投稿詳細
-[![Image from Gyazo](https://i.gyazo.com/7f0981511060d23a7adbf0165f034d6c.jpg)](https://gyazo.com/7f0981511060d23a7adbf0165f034d6c)
-[![Image from Gyazo](https://i.gyazo.com/c4038d1844f6951f7c0c744c16467fad.png)](https://gyazo.com/c4038d1844f6951f7c0c744c16467fad)
+[![Image from Gyazo](https://i.gyazo.com/02091ee88eeea4434c0a9f062aae93b5.png)](https://gyazo.com/02091ee88eeea4434c0a9f062aae93b5)
 ### ユーザー詳細
 [![Image from Gyazo](https://i.gyazo.com/b92a716d58acfb82ebc8fcf76317d0b9.jpg)](https://gyazo.com/b92a716d58acfb82ebc8fcf76317d0b9)
 ## 使用技術
