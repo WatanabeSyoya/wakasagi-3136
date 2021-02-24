@@ -5,15 +5,41 @@
       <h2 class="page-heading">
         <%= "#{@user.nickname}さんの情報"%>
       </h2>
-      <div class="user_details">
-        <% if @user.posts.present? %>
-        <%= "累計釣果記録#{@fishing_result_sum}匹" %>
-        <br><%= "一番釣れた日は#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}
-                        (#{@max_fishing_result_details.weather.name})"%><br>
-        <%= "釣果は#{@max_fishing_result}匹"%><br>
-        <%= "その時のエサは#{@max_fishing_result_details.feed.name}で、"%>
-        <%= "釣り場は#{@max_fishing_result_details.place.name}で、棚は水面から#{@max_fishing_result_details.water_depth.name}付近でした。"%>                   
-      </div>
+      <% if @user.posts.present? %>
+        <table class="detail-table">
+          <div class="detail-table-fishing-max">
+          ＜一番釣れた時＞
+          </div>
+          <tbody>
+           <tr>
+              <th class="detail-post">日付</th>
+              <td class="detail-value"><%= "#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}" %></td>
+            </tr>
+            <tr>
+              <th class="detail-post">釣果</th>
+              <td class="detail-value"><%= "#{@max_fishing_result}匹" %></td>
+            </tr>
+            <tr>
+              <th class="detail-post">釣り場</th>
+              <td class="detail-value"><%= @max_fishing_result_details.place.name %></td>
+            </tr>
+            <tr>
+              <th class="detail-post">棚</th>
+              <td class="detail-value"><%= "水面から#{@max_fishing_result_details.water_depth.name}付近" %></td>
+            </tr>
+            <tr>
+              <th class="detail-post">天気</th>
+              <td class="detail-value"><%= @max_fishing_result_details.weather.name %></td>
+            </tr>
+            <tr>
+              <th class="detail-post">エサ</th>
+              <td class="detail-value"><%= @max_fishing_result_details.feed.name %></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="user_details">        
+          <%= "★累計釣果記録#{@fishing_result_sum}匹★" %>
+        </div>
     </div>
     <div class="user__wrapper">
         <h2 class="page-heading">
