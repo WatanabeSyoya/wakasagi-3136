@@ -3,48 +3,62 @@
     <div class="user__wrapper_header">
       <%= link_to "トップページに戻る", root_path, class: "nav__btn" %>
       <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの情報"%>
+        <% case @user.skill %>
+        <% when "ビギナー" %>         
+            <span class="skill_a"><%= "#{@user.nickname}さんの情報"%></span>
+        <% when "中級者" %>         
+            <span class="skill_b"><%= "#{@user.nickname}さんの情報"%></span>>
+        <% else %>         
+            <span class="skill_c"><%= "#{@user.nickname}さんの情報"%></span>
+        <% end %>
       </h2>
-      <% if @user.posts.present? %>
-        <table class="detail-table">
-          <div class="detail-table-fishing-max">
-          ＜一番釣れた時＞
-          </div>
-          <tbody>
-           <tr>
-              <th class="detail-post">日付</th>
-              <td class="detail-value"><%= "#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}" %></td>
-            </tr>
-            <tr>
-              <th class="detail-post">釣果</th>
-              <td class="detail-value"><%= "#{@max_fishing_result}匹" %></td>
-            </tr>
-            <tr>
-              <th class="detail-post">釣り場</th>
-              <td class="detail-value"><%= @max_fishing_result_details.place.name %></td>
-            </tr>
-            <tr>
-              <th class="detail-post">棚</th>
-              <td class="detail-value"><%= "水面から#{@max_fishing_result_details.water_depth.name}付近" %></td>
-            </tr>
-            <tr>
-              <th class="detail-post">天気</th>
-              <td class="detail-value"><%= @max_fishing_result_details.weather.name %></td>
-            </tr>
-            <tr>
-              <th class="detail-post">エサ</th>
-              <td class="detail-value"><%= @max_fishing_result_details.feed.name %></td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="user_details">        
-          <%= "★累計釣果記録#{@fishing_result_sum}匹★" %>
-        </div>
     </div>
-    <div class="user__wrapper">
-        <h2 class="page-heading">
-          <%= "#{@user.nickname}さんの釣果情報"%>
-        </h2>
+    <% if @user.posts.present? %>
+      <table class="detail-table">
+        <div class="detail-table-fishing-max">
+        ＜一番釣れた時の情報＞
+        </div>
+        <tbody>
+          <tr>
+            <th class="detail-post">日付</th>
+            <td class="detail-value"><%= "#{@max_fishing_result_details.created_at.strftime('%Y/%m/%d')}" %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">釣果</th>
+            <td class="detail-value"><%= "#{@max_fishing_result}匹" %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">釣り場</th>
+            <td class="detail-value"><%= @max_fishing_result_details.place.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">棚</th>
+            <td class="detail-value"><%= "水面から#{@max_fishing_result_details.water_depth.name}付近" %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">天気</th>
+            <td class="detail-value"><%= @max_fishing_result_details.weather.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-post">エサ</th>
+            <td class="detail-value"><%= @max_fishing_result_details.feed.name %></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="user_details">
+        <% if @fishing_result_sum >= 10000 %>         
+          <span class="result_a"><%= "★累計釣果記録#{@fishing_result_sum}匹★" %></span>
+        <% elsif @fishing_result_sum >= 1000 %>
+          <span class="result_b"><%= "★累計釣果記録#{@fishing_result_sum}匹★" %></span>
+        <% elsif @fishing_result_sum >= 500 %>
+          <span class="result_c"><%= "★累計釣果記録#{@fishing_result_sum}匹★" %></span>
+        <% elsif @fishing_result_sum >= 100 %>
+          <span class="result_d"><%= "★累計釣果記録#{@fishing_result_sum}匹★" %></span>
+        <% elsif @fishing_result_sum >= 10 %>
+          <span class="result_e"><%= "★累計釣果記録#{@fishing_result_sum}匹★" %></span>
+        <% end %>
+      </div>
+      <div class="user__wrapper">
         <div class="users-box">
           <ul class='user-lists'>
             <% @posts.each do |post|%>
@@ -64,13 +78,13 @@
             <% end %>
           </ul>
         </div>
-      <% else %>
-          <div class="no_information">
-          まだ投稿されたことがありません！
-          <br>いっぱい釣ってワカサギ釣りを楽しみましょう！！！
-          <br>釣れた情報を共有してワカサギ釣りを楽しみましょう！！！
-          </div>
-      <% end %>
-    </div>
+      </div>
+    <% else %>
+      <div class="no_information">
+      まだ投稿されたことがありません！
+      <br>いっぱい釣ってワカサギ釣りを楽しみましょう！！！
+      <br>釣れた情報を共有してワカサギ釣りを楽しみましょう！！！
+      </div>
+    <% end %>
   </div>
 </div>

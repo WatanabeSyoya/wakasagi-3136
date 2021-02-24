@@ -7,15 +7,41 @@
   margin: 10px 0;
 }
 
+.page-heading{
+  margin-top: 10px;
+}
+.skill_a{
+  color: #00DD00;
+}
+.skill_b{
+  color: #0000CD;
+}
+.skill_c{
+  color: #DAA520;
+}
+
 .detail-table-fishing-max{
-  width: 100%;
   margin-top: 20px;
-  max-width: 650px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .user_details{
   font-size: 20px;
-  color: chocolate;
+  margin-bottom: 20px;
+}
+.result_a{
+  color:#D2691E;
+}
+.result_b{
+  color: #FF1493;
+}
+.result_c{
+  color: #20B2AA;
+}
+.result_d{
+  color: #4169E1;
+}
+.result_e{
+  color: #228B22;
 }
 .users-box{
   width: 100%;
@@ -74,6 +100,19 @@
 }
 .user-list{
   width: 48%;
+}
+
+}
+
+@media (min-width: 700px) {
+.page-heading{
+  font-size: 30px;    
+}
+.detail-table-fishing-max{
+  font-size: 25px;
+}
+.user_details{
+  font-size: 30px;
 }
 
 }
