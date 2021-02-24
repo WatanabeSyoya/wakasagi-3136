@@ -1,5 +1,5 @@
 .user_page{
-  width: 95%;
+  width: 90%;
   margin: 10px auto;
 }
 
@@ -8,8 +8,8 @@
 }
 
 .detail-table-fishing-max{
-  text-align: center;
   width: 100%;
+  margin-top: 20px;
   max-width: 650px;
   font-size: 20px;
 }
@@ -55,7 +55,12 @@
 }
 
 @media (max-width: 700px) {
-.page-heading{
+
+  .user_page{
+    width: 98%;
+    margin: 10px auto;
+  }
+  .page-heading{
   font-size: 20px;
   margin-top: 10px;
 }
@@ -70,8 +75,5 @@
 .user-list{
   width: 48%;
 }
-.user_page{
-  width: 99%;
 
-}
 }
