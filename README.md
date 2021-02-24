@@ -3,7 +3,7 @@
 
 ## 概要
 釣った魚の情報を投稿して釣りの情報が共有できるアプリです。
-<br>開発期間は約2週間です。↓⇩↓トップページ
+<br>開発期間は約2週間です。↓↓↓トップページ
 [![Image from Gyazo](https://i.gyazo.com/8e05da0d0f8ec658154afb002fe8014a.jpg)](https://gyazo.com/8e05da0d0f8ec658154afb002fe8014a)
 
 ## URL
