@@ -3,8 +3,9 @@
 
 ## 概要
 釣った魚の情報を投稿して釣りの情報が共有できるアプリです。
-<br>開発期間は約2週間です。
+<br>開発期間は約2週間です。↓⇩↓トップページ
 [![Image from Gyazo](https://i.gyazo.com/8e05da0d0f8ec658154afb002fe8014a.jpg)](https://gyazo.com/8e05da0d0f8ec658154afb002fe8014a)
+
 ## URL
 https://wakasagi-3136.herokuapp.com/
 
@@ -34,11 +35,11 @@ https://wakasagi-3136.herokuapp.com/
 <br>投稿詳細、ユーザー詳細、並べ替え(ソート)、いいね、コメント、画像スライド、
 <br>ページ内移動、Back to Topボタン、ハンバーガーメニュー
 
-### 投稿一覧
+### 投稿一覧ページ(トップページ)
 [![Image from Gyazo](https://i.gyazo.com/daeaa2bdc7f1a781559d3aa64187da8c.jpg)](https://gyazo.com/daeaa2bdc7f1a781559d3aa64187da8c)
-### 投稿詳細
+### 投稿詳細ページ
 [![Image from Gyazo](https://i.gyazo.com/02091ee88eeea4434c0a9f062aae93b5.png)](https://gyazo.com/02091ee88eeea4434c0a9f062aae93b5)
-### ユーザー詳細
+### ユーザー詳細ページ
 [![Image from Gyazo](https://i.gyazo.com/b92a716d58acfb82ebc8fcf76317d0b9.jpg)](https://gyazo.com/b92a716d58acfb82ebc8fcf76317d0b9)
 ## 使用技術
 - フレームワーク：Rails6.0.3
