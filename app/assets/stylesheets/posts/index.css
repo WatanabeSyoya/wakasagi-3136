@@ -59,7 +59,15 @@
 
 }
 
+.post_user_name{
+  color: #ff708d;
+}
 
+.post_user_name:hover{ 
+  color: red;
+  background-color: #F0F8FF;
+  transition: 0.2s ;
+}
 
 .message_txt{
   color: black;

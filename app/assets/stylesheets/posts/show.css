@@ -12,12 +12,14 @@
   padding: 1px;
   font-size: 20px;
   margin-bottom: 5px;
+  color: #ff708d;
 }
 
+
+
 .name:hover{
-  color: #1E90FF;
+  color: red;
   background-color: #F0F8FF;
-  border-radius: 5px;
   transition: 0.2s ;
 }
 
@@ -98,8 +100,12 @@
     border: dashed 2px white;
 }
 .message_name{
-  color:darkblue;
-  font-weight: bold;
+  color: #ff708d;
+}
+.message_name:hover{
+color: red;
+background-color: #F0F8FF;
+transition: 0.2s ;
 }
 .message_text_sukima{
   margin: 0 10px;
