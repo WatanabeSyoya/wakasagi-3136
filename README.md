@@ -34,10 +34,13 @@ https://wakasagi-3136.herokuapp.com/
 <br>投稿詳細、ユーザー詳細、並べ替え(ソート)、いいね、コメント、画像スライド、
 <br>ページ内移動、Back to Topボタン、ハンバーガーメニュー
 
+### 投稿一覧
+[![Image from Gyazo](https://i.gyazo.com/daeaa2bdc7f1a781559d3aa64187da8c.jpg)](https://gyazo.com/daeaa2bdc7f1a781559d3aa64187da8c)
 ### 投稿詳細
-[![Image from Gyazo](https://i.gyazo.com/3e9d33cc09896954efe043e4b2c44774.gif)](https://gyazo.com/3e9d33cc09896954efe043e4b2c44774)
-
-
+[![Image from Gyazo](https://i.gyazo.com/7f0981511060d23a7adbf0165f034d6c.jpg)](https://gyazo.com/7f0981511060d23a7adbf0165f034d6c)
+[![Image from Gyazo](https://i.gyazo.com/c4038d1844f6951f7c0c744c16467fad.png)](https://gyazo.com/c4038d1844f6951f7c0c744c16467fad)
+### ユーザー詳細
+[![Image from Gyazo](https://i.gyazo.com/b92a716d58acfb82ebc8fcf76317d0b9.jpg)](https://gyazo.com/b92a716d58acfb82ebc8fcf76317d0b9)
 ## 使用技術
 - フレームワーク：Rails6.0.3
 - フロント：HTML、CSS、JavaScript（jQuery）
