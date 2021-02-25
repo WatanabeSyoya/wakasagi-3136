@@ -88,7 +88,7 @@ a {
   font-family: 'M+ Type-1 (general-j) Regular';
   font-size: 24px;
   font-weight: 500;
-  padding: 7px 10px;
+  padding: 4px 4px;
 }
 .greeting:hover{
   color: #1E90FF;
@@ -326,7 +326,7 @@ a {
     padding: 20px 5px;
   }
   .title{
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .post_wrap {

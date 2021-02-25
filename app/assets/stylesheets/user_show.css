@@ -8,8 +8,13 @@
 }
 
 .page-heading{
-  margin-top: 10px;
+
 }
+
+.nav__btn_min{
+  font-size: 40px;
+}
+
 .skill_a{
   color: #00DD00;
 }
@@ -84,22 +89,23 @@
 
   .user_page{
     width: 98%;
-    margin: 10px auto;
+    margin: auto;
+  }
+
+  .user__wrapper_header{
+    margin: 10px 0;
   }
   .page-heading{
   font-size: 20px;
-  margin-top: 10px;
-}
-
-
-
-
-
+  }
 .user-lists span{
     font-size: 16px;
 }
 .user-list{
   width: 48%;
+}
+.nav__btn{
+  font-size: 14px
 }
 
 }
@@ -114,5 +120,6 @@
 .user_details{
   font-size: 30px;
 }
+
 
 }

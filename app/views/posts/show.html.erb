@@ -1,6 +1,6 @@
 <div class="post-show">
   <div class="post-box">
-    <%= link_to "トップページに戻る", root_path, class: "nav__btn" %>
+    <%= link_to "戻る", root_path, class: "nav__btn" %>
     <br><%= link_to "#{@post.user.nickname}さん",  user_path(@post.user.id),class: "name"%>
     <div class="box-header-right">        
       <% if user_signed_in? && current_user.id == @post.user_id %>

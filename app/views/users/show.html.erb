@@ -1,13 +1,13 @@
 <div class="main">
   <div class="user_page">
     <div class="user__wrapper_header">
-      <%= link_to "トップページに戻る", root_path, class: "nav__btn" %>
+      <%= link_to "戻る", root_path, class: "nav__btn" %>
       <h2 class="page-heading">
         <% case @user.skill %>
         <% when "ビギナー" %>         
             <span class="skill_a"><%= "#{@user.nickname}さんの情報"%></span>
         <% when "中級者" %>         
-            <span class="skill_b"><%= "#{@user.nickname}さんの情報"%></span>>
+            <span class="skill_b"><%= "#{@user.nickname}さんの情報"%></span>
         <% else %>         
             <span class="skill_c"><%= "#{@user.nickname}さんの情報"%></span>
         <% end %>
