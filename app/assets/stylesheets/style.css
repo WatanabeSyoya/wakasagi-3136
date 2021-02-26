@@ -189,7 +189,7 @@ a {
 }
 
 .form-wrap {
-  width: 50%;
+  width: 40%;
 }
 
 .form-header {
@@ -280,11 +280,7 @@ a {
   resize: none;
 }
 
-.redio_btn{
-  margin-right: 10px;
-  font-size: 15px;
-  display: inline-block;
-}
+
 
 
 
@@ -368,7 +364,9 @@ a {
     display: flex;
     margin-bottom: 20px;
   }
-  
+  .form-wrap {
+    width: 50%;
+  }
 
   /* 投稿詳細 */
 
